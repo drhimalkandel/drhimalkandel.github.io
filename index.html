@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <meta name="description"
-        content="Academic website of Dr Himal Kandel, vision and outcomes researcher at Save Sight Institute, The University of Sydney.">
+        content="Academic profile of Dr Himal Kandel, vision and outcomes researcher at the Save Sight Institute, The University of Sydney.">
 
   <title>Dr Himal Kandel | Academic Profile</title>
 
+
   <style>
+
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f6f8fb;
+      background: #f6f8fb;
       color: #222;
       line-height: 1.65;
     }
 
+
+    /* HEADER */
+
     header {
-      background-color: #17365d;
+      background: #17365d;
       color: white;
       padding: 24px 20px;
     }
@@ -53,64 +66,104 @@
       text-decoration: underline;
     }
 
+    nav a.active {
+      background-color: rgba(255, 255, 255, 0.15);
+      border-bottom: 3px solid white;
+      padding: 7px 10px;
+      border-radius: 4px 4px 0 0;
+    }
+
+
+    /* HERO */
+
     .hero {
       background: white;
-      padding: 55px 20px;
       border-bottom: 1px solid #e3e7ec;
+      padding: 55px 20px;
     }
 
     .hero-inner {
       max-width: 1100px;
       margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 48px;
+      align-items: center;
     }
 
-    .hero h2 {
+    .profile-photo-wrapper {
+      text-align: center;
+    }
+
+    .profile-photo {
+      width: 100%;
+      max-width: 290px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 12px;
+
+      box-shadow:
+        0 8px 24px rgba(0,0,0,0.14);
+    }
+
+    .hero-content h2 {
       color: #17365d;
-      font-size: 38px;
+      font-size: 42px;
+      line-height: 1.15;
       margin: 0 0 10px;
     }
 
-    .hero .role {
-      font-size: 21px;
-      color: #4b5563;
-      margin-bottom: 6px;
+    .role {
+      font-size: 22px;
+      color: #44515f;
+      font-weight: bold;
+      margin-bottom: 5px;
     }
 
-    .hero .institution {
+    .institution {
       font-size: 17px;
-      color: #606975;
+      color: #68717c;
       margin-bottom: 24px;
     }
 
-    .hero p {
-      max-width: 850px;
+    .hero-content p {
+      max-width: 760px;
       font-size: 18px;
+      margin-bottom: 14px;
     }
 
+
+    /* BUTTONS */
+
     .button-row {
-      margin-top: 28px;
+      margin-top: 27px;
     }
 
     .button {
       display: inline-block;
-      padding: 10px 18px;
-      margin: 0 10px 10px 0;
+      padding: 11px 18px;
+      margin: 0 9px 10px 0;
       border-radius: 5px;
-      background-color: #17365d;
+      background: #17365d;
       color: white;
       text-decoration: none;
       font-weight: bold;
     }
 
     .button.secondary {
-      background-color: #eef4fb;
       color: #17365d;
+      background: #eef4fb;
       border: 1px solid #b9c9db;
     }
 
     .button:hover {
       opacity: 0.88;
     }
+
+
+    /* MAIN */
 
     .container {
       max-width: 1100px;
@@ -123,15 +176,18 @@
       padding: 32px;
       margin-bottom: 28px;
       border-radius: 10px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      box-shadow: 0 2px 12px rgba(0,0,0,.07);
     }
 
     .section h2 {
-      color: #17365d;
       margin-top: 0;
+      color: #17365d;
       border-bottom: 2px solid #dfe5ec;
       padding-bottom: 8px;
     }
+
+
+    /* RESEARCH */
 
     .research-grid {
       display: grid;
@@ -142,16 +198,20 @@
 
     .research-card {
       background: #f8fafc;
-      border: 1px solid #e1e6ec;
+      border: 1px solid #dfe5ec;
       border-radius: 8px;
-      padding: 20px;
+      padding: 21px;
     }
 
     .research-card h3 {
-      color: #17365d;
       margin-top: 0;
       margin-bottom: 8px;
+      color: #17365d;
+      font-size: 20px;
     }
+
+
+    /* HIGHLIGHTS */
 
     .highlight-grid {
       display: grid;
@@ -161,30 +221,88 @@
     }
 
     .highlight-card {
-      text-align: center;
       background: #eef4fb;
       border-radius: 8px;
-      padding: 22px 15px;
+      padding: 23px 18px;
+      text-align: center;
     }
 
     .highlight-card strong {
       display: block;
-      font-size: 23px;
       color: #17365d;
-      margin-bottom: 5px;
+      font-size: 22px;
+      margin-bottom: 7px;
+    }
+
+
+    /* FEATURED RESEARCH */
+
+    .featured-research {
+      background: #eef4fb;
+      border-left: 5px solid #17365d;
+      border-radius: 6px;
+      padding: 23px;
+      margin-top: 18px;
+    }
+
+    .featured-research h3 {
+      color: #17365d;
+      margin-top: 0;
+    }
+
+
+    /* PROFILE LINKS */
+
+    .profile-links {
+      margin-top: 15px;
     }
 
     .profile-links a {
       display: inline-block;
-      margin: 6px 16px 6px 0;
       color: #075fa6;
       text-decoration: none;
       font-weight: bold;
+      margin: 7px 20px 7px 0;
     }
 
     .profile-links a:hover {
       text-decoration: underline;
     }
+
+
+    /* WEBSITE CARDS */
+
+    .explore-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .explore-card {
+      border: 1px solid #dfe5ec;
+      background: #fafbfd;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .explore-card h3 {
+      color: #17365d;
+      margin-top: 0;
+    }
+
+    .explore-card a {
+      color: #075fa6;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .explore-card a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* FOOTER */
 
     footer {
       text-align: center;
@@ -193,250 +311,531 @@
       font-size: 14px;
     }
 
-    @media (max-width: 750px) {
-      .hero h2 {
-        font-size: 31px;
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      .hero-inner {
+        grid-template-columns: 240px 1fr;
+        gap: 30px;
+      }
+
+      .explore-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .hero {
+        padding: 38px 20px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .profile-photo {
+        max-width: 230px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-content h2 {
+        font-size: 34px;
+      }
+
+      .hero-content p {
+        text-align: left;
       }
 
       .research-grid,
-      .highlight-grid {
+      .highlight-grid,
+      .explore-grid {
         grid-template-columns: 1fr;
       }
 
       nav a {
-        margin-right: 14px;
+        margin-right: 12px;
+        line-height: 2.5;
       }
 
       .section {
         padding: 24px 20px;
       }
+
     }
+
   </style>
+
 </head>
+
+
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
+
   <div class="header-inner">
+
     <h1>Dr Himal Kandel</h1>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="research.html">Research</a>
-  <a href="publications.html">Publications</a>
-  <a href="supervision.html">Supervision</a>
-  <a href="media.html">Media</a>
-</nav>
+    <nav>
+
+      <a class="active"
+         href="index.html">
+        Home
+      </a>
+
+      <a href="research.html">
+        Research
+      </a>
+
+      <a href="publications.html">
+        Publications
+      </a>
+
+      <a href="supervision.html">
+        Supervision
+      </a>
+
+      <a href="media.html">
+        Media
+      </a>
+
+    </nav>
+
   </div>
+
 </header>
 
+
+
+<!-- HERO -->
 
 <section class="hero">
 
   <div class="hero-inner">
 
-    <h2>Dr Himal Kandel</h2>
 
-    <div class="role">
-      Kornhauser Research Fellow
-    </div>
+    <div class="profile-photo-wrapper">
 
-    <div class="institution">
-      Save Sight Institute · 
-      Faculty of Medicine and Health · The University of Sydney
-    </div>
-
-    <p>
-      I am a vision and outcomes researcher with research interests spanning
-      patient-reported outcomes, quality of life, corneal disease,
-      keratoconus, refractive error and clinical registries.
-      My work focuses on understanding patient outcomes and generating
-      evidence that can improve eye care, clinical decision-making and
-      patient-centred practice.
-    </p>
-
-    <div class="button-row">
-
-      <a class="button" href="publications.html">
-        View Publications
-      </a>
-
-      <a class="button secondary" href="research.html">
-        Explore Research
-      </a>
+      <img
+        class="profile-photo"
+        src="himal-kandel.jpg"
+        alt="Dr Himal Kandel">
 
     </div>
+
+
+
+    <div class="hero-content">
+
+      <h2>Dr Himal Kandel</h2>
+
+      <div class="role">
+        Kornhauser Research Associate
+      </div>
+
+      <div class="institution">
+        Save Sight Institute · Sydney Medical School ·
+        Faculty of Medicine and Health · The University of Sydney
+      </div>
+
+      <p>
+        I am a vision and outcomes researcher with a particular
+        interest in patient-reported outcomes, quality of life,
+        corneal disease, keratoconus, refractive error and
+        real-world clinical registry research.
+      </p>
+
+      <p>
+        My research aims to understand not only clinical outcomes,
+        but also how eye diseases and their treatments affect
+        patients' daily lives, well-being and experiences of care.
+      </p>
+
+      <div class="button-row">
+
+        <a class="button"
+           href="publications.html">
+          View Publications
+        </a>
+
+        <a class="button secondary"
+           href="research.html">
+          Explore Research
+        </a>
+
+        <a class="button secondary"
+           href="media.html">
+          Media & Engagement
+        </a>
+
+      </div>
+
+    </div>
+
 
   </div>
 
 </section>
 
 
+
 <main class="container">
 
-  <section class="section">
 
-    <h2>Research Focus</h2>
+<!-- ABOUT -->
 
-    <div class="research-grid">
+<section class="section">
 
-      <div class="research-card">
+  <h2>About</h2>
 
-        <h3>Outcomes Research</h3>
+  <p>
+    I am based at the Save Sight Institute, The University of Sydney,
+    where my work spans clinical outcomes research, patient-reported
+    outcomes, corneal disease and real-world evidence.
+  </p>
 
-        <p>
-          Evaluation of clinical and patient-reported outcomes using
-          longitudinal data, statistical modelling and modern outcome
-          measurement approaches.
-        </p>
+  <p>
+    My research uses clinical registry data, statistical modelling,
+    psychometric methods and qualitative and mixed-methods approaches
+    to evaluate outcomes that matter to both patients and clinicians.
+  </p>
 
-      </div>
+  <p>
+    I collaborate with clinicians and researchers in Australia
+    and internationally, and contribute to research supervision,
+    mentoring, scientific communication and community engagement.
+  </p>
 
-
-      <div class="research-card">
-
-        <h3>Quality of Life</h3>
-
-        <p>
-          Development and evaluation of patient-reported outcome measures,
-          including psychometric methods such as Rasch analysis and
-          item-response theory.
-        </p>
-
-      </div>
+</section>
 
 
-      <div class="research-card">
 
-        <h3>Cornea & Keratoconus</h3>
+<!-- RESEARCH -->
 
-        <p>
-          Real-world research into keratoconus, corneal cross-linking,
-          disease progression, treatment outcomes and the patient impact
-          of corneal disease.
-        </p>
+<section class="section">
 
-      </div>
+  <h2>Research Focus</h2>
+
+  <div class="research-grid">
 
 
-      <div class="research-card">
+    <div class="research-card">
 
-        <h3>Refractive Error</h3>
+      <h3>
+        Outcomes Research
+      </h3>
 
-        <p>
-          Research examining the impact of refractive error and its
-          correction on people's quality of life, including development
-          of refractive error-specific item banks.
-        </p>
-
-      </div>
+      <p>
+        Evaluation of clinical and patient-reported outcomes
+        using longitudinal data, statistical modelling and
+        real-world evidence.
+      </p>
 
     </div>
 
-  </section>
 
 
-  <section class="section">
+    <div class="research-card">
 
-    <h2>Selected Highlights</h2>
+      <h3>
+        Quality of Life
+      </h3>
 
-    <div class="highlight-grid">
-
-      <div class="highlight-card">
-
-        <strong>115+</strong>
-
-        Peer-reviewed publication records
-
-      </div>
-
-
-      <div class="highlight-card">
-
-        <strong>Global Research</strong>
-
-        International collaborations in vision science,
-        clinical outcomes and global health
-
-      </div>
-
-
-      <div class="highlight-card">
-
-        <strong>Award-Winning</strong>
-
-        Recognised for research publications,
-        doctoral research and academic achievement
-
-      </div>
+      <p>
+        Development and application of patient-reported outcome
+        measures, including modern psychometric methods such as
+        Rasch analysis and item-response theory.
+      </p>
 
     </div>
 
-  </section>
 
 
-  <section class="section">
+    <div class="research-card">
 
-    <h2>Academic Profiles</h2>
+      <h3>
+        Cornea & Keratoconus
+      </h3>
+
+      <p>
+        Research into keratoconus, corneal cross-linking,
+        disease progression, treatment outcomes and the
+        patient impact of corneal disease.
+      </p>
+
+    </div>
+
+
+
+    <div class="research-card">
+
+      <h3>
+        Clinical Registries
+      </h3>
+
+      <p>
+        Use of real-world clinical registry data to study
+        effectiveness, safety, treatment variation and
+        patient outcomes in routine clinical practice.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- SELECTED HIGHLIGHTS -->
+
+<section class="section">
+
+  <h2>Selected Highlights</h2>
+
+  <div class="highlight-grid">
+
+
+    <div class="highlight-card">
+
+      <strong>
+        115+
+      </strong>
+
+      Peer-reviewed publication records
+
+    </div>
+
+
+
+    <div class="highlight-card">
+
+      <strong>
+        International Research
+      </strong>
+
+      Collaborative work across vision science,
+      ophthalmology and global health
+
+    </div>
+
+
+
+    <div class="highlight-card">
+
+      <strong>
+        Research Translation
+      </strong>
+
+      Publications, media, professional education,
+      podcasts and community engagement
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- FEATURED RESEARCH -->
+
+<section class="section">
+
+  <h2>Research Recognition</h2>
+
+  <div class="featured-research">
+
+    <h3>
+      Award-Winning Research on Dry Eye Disease
+    </h3>
 
     <p>
-      Full publication records, citation information and researcher
-      identifiers are also available through my academic profiles.
+      My research examining the impact of dry eye disease on
+      patient-reported quality of life received the
+      University of Sydney Faculty of Medicine and Health
+      EMCR Outstanding Publication Award in the Mid-Career category.
     </p>
 
-    <div class="profile-links">
+    <p>
+      The research has also attracted professional media coverage
+      and was featured in the Faculty's
+      <strong>Research Bytes</strong> podcast.
+    </p>
 
-      <a href="https://orcid.org/0000-0002-6745-6411"
-         target="_blank"
-         rel="noopener">
-        ORCID
-      </a>
+    <a class="button"
+       href="media.html">
+      View Media & Engagement
+    </a>
 
-      <a href="https://www.scopus.com/authid/detail.uri?authorId=57226834655"
-         target="_blank"
-         rel="noopener">
-        Scopus
-      </a>
+  </div>
 
-      <a href="https://scholar.google.com/scholar?q=Himal+Kandel"
-         target="_blank"
-         rel="noopener">
-        Google Scholar
+</section>
+
+
+
+<!-- EXPLORE -->
+
+<section class="section">
+
+  <h2>Explore</h2>
+
+  <div class="explore-grid">
+
+
+    <div class="explore-card">
+
+      <h3>
+        Research
+      </h3>
+
+      <p>
+        Learn more about my research themes,
+        methods and collaborations.
+      </p>
+
+      <a href="research.html">
+        Explore research →
       </a>
 
     </div>
 
-  </section>
 
 
-  <section class="section">
+    <div class="explore-card">
 
-    <h2>About</h2>
+      <h3>
+        Publications
+      </h3>
 
-    <p>
-      I am based at the Save Sight Institute, The University of Sydney,
-      where my research includes clinical registry studies, patient-reported
-      outcomes and corneal research. My work involves multidisciplinary and
-      international collaborations, research supervision, statistical
-      analysis, grant development and translation of research findings into
-      clinically relevant evidence.
-    </p>
+      <p>
+        Browse my peer-reviewed publications
+        by year and research topic.
+      </p>
 
-    <p>
-      Please visit the
-      <a href="research.html">Research page</a>
-      for more information about my research program, or browse my
-      <a href="publications.html">peer-reviewed publications</a>.
-    </p>
+      <a href="publications.html">
+        View publications →
+      </a>
 
-  </section>
+    </div>
+
+
+
+    <div class="explore-card">
+
+      <h3>
+        Supervision
+      </h3>
+
+      <p>
+        Read about my research supervision
+        and mentoring approach.
+      </p>
+
+      <a href="supervision.html">
+        View supervision →
+      </a>
+
+    </div>
+
+
+
+    <div class="explore-card">
+
+      <h3>
+        Media
+      </h3>
+
+      <p>
+        Explore media coverage, podcasts
+        and research engagement.
+      </p>
+
+      <a href="media.html">
+        View media →
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- ACADEMIC PROFILES -->
+
+<section class="section">
+
+  <h2>Academic Profiles</h2>
+
+  <p>
+    Publication records, researcher identifiers and citation
+    information are also available through my academic profiles.
+  </p>
+
+  <div class="profile-links">
+
+
+    <a href="https://orcid.org/0000-0002-6745-6411"
+       target="_blank"
+       rel="noopener">
+
+      ORCID
+
+    </a>
+
+
+    <a href="https://www.scopus.com/authid/detail.uri?authorId=57226834655"
+       target="_blank"
+       rel="noopener">
+
+      Scopus
+
+    </a>
+
+
+    <a href="https://scholar.google.com/scholar?q=Himal+Kandel"
+       target="_blank"
+       rel="noopener">
+
+      Google Scholar
+
+    </a>
+
+
+  </div>
+
+</section>
+
 
 </main>
 
 
+
 <footer>
+
   © 2026 Dr Himal Kandel
+
 </footer>
 
+
 </body>
+
 </html>
