@@ -62,6 +62,13 @@
       text-decoration: underline;
     }
 
+    nav a.active {
+      background-color: rgba(255, 255, 255, 0.15);
+      border-bottom: 3px solid white;
+      padding: 7px 10px;
+      border-radius: 4px 4px 0 0;
+    }
+
 
     /* HERO */
 
@@ -89,7 +96,7 @@
     }
 
 
-    /* MAIN CONTENT */
+    /* MAIN */
 
     .container {
       max-width: 1100px;
@@ -113,7 +120,7 @@
     }
 
 
-    /* FEATURED PODCAST */
+    /* PODCAST */
 
     .featured {
       background: #eef4fb;
@@ -135,40 +142,74 @@
 
     .featured h3 {
       color: #17365d;
-      font-size: 23px;
+      font-size: 24px;
       margin: 5px 0 10px;
     }
 
-
-    /* MEDIA STORIES */
-
-    .media-card {
-      padding: 20px 0;
-      border-bottom: 1px solid #e6e9ed;
+    .spotify-player {
+      margin-top: 22px;
+      width: 100%;
+      border: none;
+      border-radius: 12px;
     }
 
-    .media-card:last-child {
-      border-bottom: none;
+
+    /* MEDIA GRID */
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .media-card {
+      border: 1px solid #dfe5ec;
+      border-radius: 9px;
+      overflow: hidden;
+      background: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .media-thumbnail {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background: #eef1f4;
+    }
+
+    .media-body {
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .media-card h3 {
       color: #17365d;
-      margin: 0 0 7px;
+      margin: 4px 0 8px;
       font-size: 20px;
+      line-height: 1.35;
     }
 
     .media-card p {
-      margin: 5px 0;
+      margin: 6px 0;
     }
 
     .source {
       color: #606975;
       font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .3px;
     }
 
     .media-link {
       display: inline-block;
-      margin-top: 7px;
+      margin-top: auto;
+      padding-top: 12px;
       color: #075fa6;
       text-decoration: none;
       font-weight: bold;
@@ -176,6 +217,24 @@
 
     .media-link:hover {
       text-decoration: underline;
+    }
+
+
+    /* TEXT-ONLY STORIES */
+
+    .text-media {
+      padding: 20px 0;
+      border-bottom: 1px solid #e6e9ed;
+    }
+
+    .text-media:last-child {
+      border-bottom: none;
+    }
+
+    .text-media h3 {
+      color: #17365d;
+      margin: 3px 0 7px;
+      font-size: 20px;
     }
 
 
@@ -201,7 +260,7 @@
     }
 
 
-    /* COMMUNITY BOX */
+    /* COMMUNITY */
 
     .highlight {
       background: #eef4fb;
@@ -226,8 +285,13 @@
 
     @media (max-width: 800px) {
 
+      .media-grid,
       .engagement-grid {
         grid-template-columns: 1fr;
+      }
+
+      .media-thumbnail {
+        height: 210px;
       }
 
       .hero h2 {
@@ -252,8 +316,6 @@
 <body>
 
 
-<!-- HEADER -->
-
 <header>
 
   <div class="header-inner">
@@ -270,7 +332,7 @@
 
       <a href="supervision.html">Supervision</a>
 
-      <a href="media.html">Media</a>
+      <a class="active" href="media.html">Media</a>
 
     </nav>
 
@@ -279,8 +341,6 @@
 </header>
 
 
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -339,13 +399,19 @@
       outcomes of eye care.
     </p>
 
+    <iframe
+      class="spotify-player"
+      src="https://open.spotify.com/embed/episode/5TVTw9konwiu3W6w9Tp7YB"
+      height="152"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+
     <a class="media-link"
        href="https://open.spotify.com/episode/5TVTw9konwiu3W6w9Tp7YB"
        target="_blank"
        rel="noopener">
-
-       Listen on Spotify →
-
+       Open in Spotify →
     </a>
 
   </div>
@@ -354,52 +420,155 @@
 
 
 
-<!-- MEDIA COVERAGE -->
+<!-- FEATURED MEDIA WITH THUMBNAILS -->
 
 <section class="section">
 
-  <h2>Selected Media Coverage</h2>
+  <h2>Featured Media Coverage</h2>
+
+  <div class="media-grid">
 
 
-  <div class="media-card">
+    <!-- INSIGHT DRY EYE -->
 
-    <h3>
-      Aussie Researchers Lead Global Study on How Dry Eye
-      Impacts Quality of Life
-    </h3>
+    <article class="media-card">
 
-    <p class="source">
-      Insight
-    </p>
+      <img
+        class="media-thumbnail"
+        src="https://www.insightnews.com.au/wp-content/uploads/2025/03/Save-sight-Dry-eyephoto-collage.png-11-750x422.jpg"
+        alt="Authors and dry eye research featured by Insight"
+        loading="lazy"
+        onerror="this.style.display='none';">
 
-    <p>
-      Coverage of research investigating the impact of
-      dry eye disease on patient-reported quality of life
-      using data from the Save Sight Dry Eye Registry.
-    </p>
+      <div class="media-body">
 
-    <a class="media-link"
-       href="https://www.insightnews.com.au/aussie-researchers-lead-global-study-on-how-dry-eye-impacts-quality-of-life/"
-       target="_blank"
-       rel="noopener">
+        <div class="source">Insight</div>
 
-       Read article →
+        <h3>
+          Aussie Researchers Lead Global Study on How Dry Eye
+          Impacts Quality of Life
+        </h3>
 
-    </a>
+        <p>
+          Coverage of research using Save Sight Dry Eye Registry
+          data to investigate the quality-of-life burden of
+          dry eye disease.
+        </p>
+
+        <a class="media-link"
+           href="https://www.insightnews.com.au/aussie-researchers-lead-global-study-on-how-dry-eye-impacts-quality-of-life/"
+           target="_blank"
+           rel="noopener">
+          Read article →
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- PULSED CROSSLINKING -->
+
+    <article class="media-card">
+
+      <img
+        class="media-thumbnail"
+        src="https://www.insightnews.com.au/wp-content/uploads/2024/10/photo-collage.png-3-1-750x422.jpg"
+        alt="Researchers featured in Insight article about pulsed corneal cross-linking"
+        loading="lazy"
+        onerror="this.style.display='none';">
+
+      <div class="media-body">
+
+        <div class="source">Insight</div>
+
+        <h3>
+          Sydney Study: Pulsed Corneal Cross-Linking as
+          Effective as Standard Protocol
+        </h3>
+
+        <p>
+          Media coverage of a systematic review and meta-analysis
+          comparing pulsed and continuous corneal cross-linking
+          protocols for keratoconus.
+        </p>
+
+        <a class="media-link"
+           href="https://www.insightnews.com.au/sydney-study-pulsed-corneal-crosslinking-as-effective-as-standard-protocol/"
+           target="_blank"
+           rel="noopener">
+          Read article →
+        </a>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- REVIEW OF OPTOMETRY -->
+
+    <article class="media-card">
+
+      <img
+        class="media-thumbnail"
+        src="https://www.reviewofoptometry.com/CMSImagesContent/2025/06/RO%20News/06162025%20KCN.jpg"
+        alt="Corneal image accompanying Review of Optometry article"
+        loading="lazy"
+        onerror="this.style.display='none';">
+
+      <div class="media-body">
+
+        <div class="source">
+          Review of Optometry
+        </div>
+
+        <h3>
+          Corneal Cross-Linking Largely Safe in Kids
+          with Thin Corneas
+        </h3>
+
+        <p>
+          Coverage of multicentre registry research examining
+          cross-linking outcomes in paediatric keratoconus
+          with thin corneas.
+        </p>
+
+        <a class="media-link"
+           href="https://www.reviewofoptometry.com/news/article/corneal-crosslinking-largely-safe-in-kids-with-thin-corneas"
+           target="_blank"
+           rel="noopener">
+          Read article →
+        </a>
+
+      </div>
+
+    </article>
+
 
   </div>
 
+</section>
 
 
-  <div class="media-card">
+
+<!-- ADDITIONAL MEDIA -->
+
+<section class="section">
+
+  <h2>Additional Media Coverage</h2>
+
+
+  <div class="text-media">
+
+    <div class="source">
+      The Ophthalmologist
+    </div>
 
     <h3>
       The Mental Health Costs of Dry Eye Disease
     </h3>
-
-    <p class="source">
-      The Ophthalmologist
-    </p>
 
     <p>
       Coverage examining the quality-of-life and mental health
@@ -407,27 +576,25 @@
     </p>
 
     <a class="media-link"
-       href="https://theophthalmologist.com/business-profession/the-mental-health-costs-of-ded"
+       href="https://theophthalmologist.com/issues/2025/articles/mar/the-mental-health-costs-of-ded/"
        target="_blank"
        rel="noopener">
-
-       Read article →
-
+      Read article →
     </a>
 
   </div>
 
 
 
-  <div class="media-card">
+  <div class="text-media">
+
+    <div class="source">
+      MiVision
+    </div>
 
     <h3>
       Save Sight Registry Provides Dry Eye Disease Insights
     </h3>
-
-    <p class="source">
-      MiVision
-    </p>
 
     <p>
       Coverage of Save Sight Dry Eye Registry research examining
@@ -438,24 +605,22 @@
        href="https://mivision.com.au/2025/02/save-sight-registry-provides-dry-eye-disease-insights/"
        target="_blank"
        rel="noopener">
-
-       Read article →
-
+      Read article →
     </a>
 
   </div>
 
 
 
-  <div class="media-card">
+  <div class="text-media">
+
+    <div class="source">
+      NZ Optics
+    </div>
 
     <h3>
       Assessing the Impact of Dry Eye Disease
     </h3>
-
-    <p class="source">
-      NZ Optics
-    </p>
 
     <p>
       Coverage of research examining the patient-reported
@@ -466,96 +631,35 @@
        href="https://www.nzoptics.co.nz/live-articles/assessing-the-impact-of-dry-eye-disease/"
        target="_blank"
        rel="noopener">
-
-       Read article →
-
+      Read article →
     </a>
 
   </div>
 
 
 
-  <div class="media-card">
+  <div class="text-media">
+
+    <div class="source">
+      Insight
+    </div>
 
     <h3>
-      Research Demonstrates How Keratoconus Affects
-      Patients' Quality of Life
+      Australian Researchers Reveal How Keratoconus
+      Affects Quality of Life
     </h3>
 
-    <p class="source">
-      Insight
-    </p>
-
     <p>
-      Coverage of qualitative research exploring the lived
-      experience and quality-of-life impact of keratoconus.
+      Coverage of qualitative research exploring how
+      keratoconus affects patients' social, emotional,
+      functional and economic quality of life.
     </p>
 
     <a class="media-link"
        href="https://www.insightnews.com.au/research-demonstrates-how-keratoconus-affects-patients-quality-of-life/"
        target="_blank"
        rel="noopener">
-
-       Read article →
-
-    </a>
-
-  </div>
-
-
-
-  <div class="media-card">
-
-    <h3>
-      Sydney Study: Pulsed Corneal Cross-Linking as Effective
-      as Standard Protocol
-    </h3>
-
-    <p class="source">
-      Insight
-    </p>
-
-    <p>
-      Media coverage of a systematic review and meta-analysis
-      examining pulsed corneal cross-linking for keratoconus.
-    </p>
-
-    <a class="media-link"
-       href="https://www.insightnews.com.au/sydney-study-pulsed-corneal-crosslinking-as-effective-as-standard-protocol/"
-       target="_blank"
-       rel="noopener">
-
-       Read article →
-
-    </a>
-
-  </div>
-
-
-
-  <div class="media-card">
-
-    <h3>
-      Corneal Cross-Linking in Children with Thin Corneas
-    </h3>
-
-    <p class="source">
-      Review of Optometry
-    </p>
-
-    <p>
-      Coverage of registry research examining corneal
-      cross-linking outcomes in children with keratoconus
-      and thin corneas.
-    </p>
-
-    <a class="media-link"
-       href="https://www.reviewofoptometry.com/news/article/corneal-crosslinking-largely-safe-in-kids-with-thin-corneas"
-       target="_blank"
-       rel="noopener">
-
-       Read article →
-
+      Read article →
     </a>
 
   </div>
@@ -579,9 +683,9 @@
       <h3>KeraClub</h3>
 
       <p>
-        Contribution to KeraClub community events bringing together
+        Contribution to community events bringing together
         people with keratoconus, families, clinicians and researchers
-        to discuss current evidence, treatment options and living
+        to discuss evidence, treatment options and living
         with keratoconus.
       </p>
 
@@ -635,50 +739,48 @@
 
 
 
-<!-- PROFESSIONAL ARTICLES -->
+<!-- PROFESSIONAL COMMUNICATION -->
 
 <section class="section">
 
   <h2>Selected Articles & Professional Communication</h2>
 
 
-  <div class="media-card">
+  <div class="text-media">
+
+    <div class="source">
+      MiVision
+    </div>
 
     <h3>
       KeraClub 2022: Latest Developments in Keratoconus
     </h3>
 
-    <p class="source">
-      MiVision
-    </p>
-
     <p>
-      Professional and community communication about developments
-      in keratoconus research and management.
+      Professional and community communication about
+      developments in keratoconus research and management.
     </p>
 
     <a class="media-link"
        href="https://mivision.com.au/2022/11/keraclub-2022-latest-developments-in-keratoconus/"
        target="_blank"
        rel="noopener">
-
-       Read article →
-
+      Read article →
     </a>
 
   </div>
 
 
 
-  <div class="media-card">
+  <div class="text-media">
+
+    <div class="source">
+      NZ Optics
+    </div>
 
     <h3>
       World's First International Dry Eye Registry
     </h3>
-
-    <p class="source">
-      NZ Optics
-    </p>
 
     <p>
       Professional communication about the development and
@@ -689,24 +791,22 @@
        href="https://www.nzoptics.co.nz/articles/archive/world-s-first-international-dry-eye-registry/"
        target="_blank"
        rel="noopener">
-
-       Read article →
-
+      Read article →
     </a>
 
   </div>
 
 
 
-  <div class="media-card">
+  <div class="text-media">
+
+    <div class="source">
+      International Agency for the Prevention of Blindness
+    </div>
 
     <h3>
       Thinking Beyond a Pair of Glasses
     </h3>
-
-    <p class="source">
-      International Agency for the Prevention of Blindness
-    </p>
 
     <p>
       A public-facing article discussing refractive error
@@ -720,7 +820,7 @@
 
 
 
-<!-- COMMUNITY ENGAGEMENT -->
+<!-- COMMUNITY -->
 
 <section class="section">
 
@@ -746,7 +846,7 @@
 
 
 
-<!-- RELATED WORK -->
+<!-- RELATED -->
 
 <section class="section">
 
@@ -759,9 +859,7 @@
 
   <a class="media-link"
      href="publications.html">
-
-     View peer-reviewed publications →
-
+    View peer-reviewed publications →
   </a>
 
 </section>
@@ -772,9 +870,7 @@
 
 
 <footer>
-
   © 2026 Dr Himal Kandel
-
 </footer>
 
 
