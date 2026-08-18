@@ -3,178 +3,860 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="description" content="Peer-reviewed publications by Dr Himal Kandel.">
   <title>Publications | Dr Himal Kandel</title>
-
   <style>
+    * { box-sizing: border-box; }
     body {
       font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      background-color: #f8f9fa;
+      background: #f6f8fb;
       color: #222;
-      line-height: 1.6;
+      line-height: 1.65;
     }
-
     header {
-      background-color: #17365d;
+      background: #17365d;
       color: white;
-      padding: 25px 20px;
+      padding: 24px 20px;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 30px;
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
     }
-
-    nav {
-      margin-top: 12px;
-    }
-
+    header h1 { margin: 0; font-size: 30px; }
+    nav { margin-top: 12px; }
     nav a {
       color: white;
       text-decoration: none;
       margin-right: 22px;
-      font-weight: bold;
+      font-weight: 700;
     }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
+    nav a:hover { text-decoration: underline; }
     .container {
-      max-width: 1000px;
-      margin: 40px auto;
+      max-width: 1100px;
+      margin: 34px auto;
       background: white;
-      padding: 35px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      padding: 36px;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.08);
     }
-
+    .page-title { color: #17365d; margin: 0 0 8px; }
+    .intro { font-size: 17px; margin-bottom: 18px; }
+    .summary {
+      background: #eef4fb;
+      border-left: 4px solid #17365d;
+      padding: 14px 16px;
+      margin: 22px 0;
+      border-radius: 4px;
+    }
+    .year-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: white;
+      border-top: 1px solid #e3e7ec;
+      border-bottom: 1px solid #e3e7ec;
+      padding: 13px 0;
+      margin: 24px 0 30px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .year-nav a {
+      color: #17365d;
+      text-decoration: none;
+      margin-right: 14px;
+      font-weight: 700;
+    }
+    .year-nav a:hover { text-decoration: underline; }
+    .search-box {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #c9d1da;
+      border-radius: 6px;
+      font-size: 16px;
+      margin: 4px 0 8px;
+    }
     h2 {
       color: #17365d;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 8px;
-      margin-top: 35px;
+      border-bottom: 2px solid #dfe5ec;
+      padding-bottom: 7px;
+      margin-top: 38px;
     }
-
-    .intro {
-      font-size: 17px;
-      margin-bottom: 30px;
-    }
-
     .publication {
-      margin-bottom: 22px;
+      display: flex;
+      gap: 12px;
+      padding: 15px 0;
+      border-bottom: 1px solid #edf0f3;
     }
-
-    .publication-title {
-      font-weight: bold;
+    .pub-number {
+      min-width: 34px;
+      font-weight: 700;
+      color: #5a6572;
     }
-
-    .journal {
-      font-style: italic;
+    .pub-content { flex: 1; }
+    .citation strong {
+      color: #17365d;
+      font-weight: 800;
     }
-
-    .doi-link {
+    .pub-links { margin-top: 7px; }
+    .doi-link, .scholar-link {
       display: inline-block;
-      margin-top: 5px;
-      color: #0066cc;
       text-decoration: none;
+      font-size: 14px;
+      margin-right: 14px;
+      margin-top: 3px;
     }
-
-    .doi-link:hover {
-      text-decoration: underline;
-    }
-
+    .doi-link { color: #075fa6; font-weight: 700; }
+    .scholar-link { color: #555; }
+    .doi-link:hover, .scholar-link:hover { text-decoration: underline; }
     footer {
       text-align: center;
-      padding: 25px;
-      color: #666;
+      color: #68717c;
+      padding: 24px;
       font-size: 14px;
+    }
+    @media (max-width: 700px) {
+      .container { margin: 0; border-radius: 0; padding: 24px 18px; }
+      header h1 { font-size: 25px; }
+      nav a { margin-right: 14px; }
     }
   </style>
 </head>
-
 <body>
-
 <header>
-  <h1>Dr Himal Kandel</h1>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="publications.html">Publications</a>
-  </nav>
+  <div class="header-inner">
+    <h1>Dr Himal Kandel</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+    </nav>
+  </div>
 </header>
 
-<div class="container">
-
-  <h1>Peer-Reviewed Publications</h1>
-
+<main class="container">
+  <h1 class="page-title">Peer-Reviewed Publications</h1>
   <p class="intro">
-    Peer-reviewed journal publications by Dr Himal Kandel.
-    Publications are listed in reverse chronological order.
-    Conference abstracts and proceedings are not included.
+    Peer-reviewed journal publications by Dr Himal Kandel, listed in reverse chronological order.
+    Conference abstracts and conference proceedings are excluded.
   </p>
 
-  <h2>2026</h2>
-
-  <div class="publication">
-    <span class="publication-title">
-      Lahijanian S, <strong>Kandel H</strong>, Kha R, Watson SL.
-      The association between keratoconus and inflammatory bowel disease:
-      A systematic review and meta-analysis.
-    </span>
-    <span class="journal"> Cornea.</span> 2026.
+  <div class="summary">
+    <strong>115 publication records currently transcribed from the CV.</strong>
+    DOI links are shown where a DOI is explicitly available in the CV or has been independently verified.
+    A Google Scholar link is provided for every record.
   </div>
 
-  <div class="publication">
-    <span class="publication-title">
-      Ouyang CM, Fan L, <strong>Kandel H</strong>, Watson SL.
-      Xerophthalmia and ocular manifestations of vitamin A deficiency in
-      children of high-income countries: a systematic review.
-    </span>
-    <span class="journal"> Survey of Ophthalmology.</span> 2026.
+  <input id="pubSearch" class="search-box" type="search"
+         placeholder="Search publications by author, title, journal or year..."
+         aria-label="Search publications">
+
+  <div class="year-nav"><a href="#year-2026">2026</a> <a href="#year-2025">2025</a> <a href="#year-2024">2024</a> <a href="#year-2023">2023</a> <a href="#year-2022">2022</a> <a href="#year-2021">2021</a> <a href="#year-2020">2020</a> <a href="#year-2019">2019</a> <a href="#year-2018">2018</a> <a href="#year-2017">2017</a> <a href="#year-2016">2016</a> <a href="#year-2015">2015</a> <a href="#year-2014">2014</a> <a href="#year-2012">2012</a> <a href="#year-2011">2011</a></div>
+
+  <div id="publicationList">
+    <h2 id="year-2026">2026</h2><div class="publication">
+              <div class="pub-number">1.</div>
+              <div class="pub-content">
+                <div class="citation">Lahijanian S, <strong>Kandel H</strong>, Kha R, Watson SL. The association between keratoconus and inflammatory bowel disease: A systematic review and meta-analysis. [Accepted – Cornea]</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Lahijanian%20S%2C%20Kandel%20H%2C%20Kha%20R%2C%20Watson%20SL.%20The%20association%20between%20keratoconus%20and%20inflammatory%20bowel%20disease%3A%20A%20systematic%20review%20and%20meta-analysis.%20%5BAccepted%20%E2%80%93%20Cornea%5D" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">2.</div>
+              <div class="pub-content">
+                <div class="citation">Ouyang CM, Fan L, <strong>Kandel H</strong>, Watson SL. Xerophthalmia and ocular manifestations of vitamin A deficiency in children of high-income countries: a systematic review. Survey of Ophthalmology. 2026 May 22.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Ouyang%20CM%2C%20Fan%20L%2C%20Kandel%20H%2C%20Watson%20SL.%20Xerophthalmia%20and%20ocular%20manifestations%20of%20vitamin%20A%20deficiency%20in%20children%20of%20high-income%20countries%3A%20a%20systematic%20review.%20Survey%20of%20Ophthalmology.%202026%20May%2022." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">3.</div>
+              <div class="pub-content">
+                <div class="citation">Gyawali R, Bist J, <strong>Kandel H</strong>, Lamsal S, Dhungana AP, Lamsal S. Barriers and enablers to low vision service delivery: a systematic review informed by the Theoretical Domains Framework. Clinical and Experimental Optometry. 2026 May 27:1-7.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Gyawali%20R%2C%20Bist%20J%2C%20Kandel%20H%2C%20Lamsal%20S%2C%20Dhungana%20AP%2C%20Lamsal%20S.%20Barriers%20and%20enablers%20to%20low%20vision%20service%20delivery%3A%20a%20systematic%20review%20informed%20by%20the%20Theoretical%20Domains%20Framework.%20Clinical%20and%20Experimental%20Optometry.%202026%20May%2027%3A1-7." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">4.</div>
+              <div class="pub-content">
+                <div class="citation">van der Nagel A, Cool D, <strong>Kandel H</strong>, Watson S. Prevalence, Treatment, and Outcomes of Corneal Disease in Aboriginal and Torres Strait Islander Peoples in Australia: A Systematic Review. Clinical &amp; Experimental Ophthalmology. 2026 Apr 13.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=van%20der%20Nagel%20A%2C%20Cool%20D%2C%20Kandel%20H%2C%20Watson%20S.%20Prevalence%2C%20Treatment%2C%20and%20Outcomes%20of%20Corneal%20Disease%20in%20Aboriginal%20and%20Torres%20Strait%20Islander%20Peoples%20in%20Australia%3A%20A%20Systematic%20Review.%20Clinical%20%26%20Experimental%20Ophthalmology.%202026%20Apr%2013." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">5.</div>
+              <div class="pub-content">
+                <div class="citation">Taher A, <strong>Kandel H</strong>, Watson S. Diagnostic Utility of Corneal Parameters Measured with Pentacam Imaging in the Diagnosis of Early Keratoconus using real-world data: A Save Sight Keratoconus Registry study. AJO International. 2026 Mar 31:100251.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Taher%20A%2C%20Kandel%20H%2C%20Watson%20S.%20Diagnostic%20Utility%20of%20Corneal%20Parameters%20Measured%20with%20Pentacam%20Imaging%20in%20the%20Diagnosis%20of%20Early%20Keratoconus%20using%20real-world%20data%3A%20A%20Save%20Sight%20Keratoconus%20Registry%20study.%20AJO%20International.%202026%20Mar%2031%3A100251." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">6.</div>
+              <div class="pub-content">
+                <div class="citation">Kha R, <strong>Kandel H</strong>, Watson SL. Trends in the management of keratoconus in Australia. in Ophthalmic and Physiological Optics 2026</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1007/s44402-026-00096-2" target="_blank" rel="noopener">DOI: 10.1007/s44402-026-00096-2</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Kha%20R%2C%20Kandel%20H%2C%20Watson%20SL.%20Trends%20in%20the%20management%20of%20keratoconus%20in%20Australia.%20in%20Ophthalmic%20and%20Physiological%20Optics%202026" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><h2 id="year-2025">2025</h2><div class="publication">
+              <div class="pub-number">7.</div>
+              <div class="pub-content">
+                <div class="citation">Sari D, <strong>Kandel H</strong>, Kha R, Watson SL. What is the quality-of-life status of patients with keratoconus who have not had a surgical intervention? A systematic review Eye;2025</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1038/s41433-025-04053-0" target="_blank" rel="noopener">DOI: 10.1038/s41433-025-04053-0</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Sari%20D%2C%20Kandel%20H%2C%20Kha%20R%2C%20Watson%20SL.%20What%20is%20the%20quality-of-life%20status%20of%20patients%20with%20keratoconus%20who%20have%20not%20had%20a%20surgical%20intervention%3F%20A%20systematic%20review%20Eye%3B2025" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">8.</div>
+              <div class="pub-content">
+                <div class="citation">Abid A, <strong>Kandel H</strong>, Watson S. Systematic review investigating the time taken for corneal stabilisation following contact lens cessation. British Journal of Ophthalmology. 2025</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1136/bjo-2025-327121" target="_blank" rel="noopener">DOI: 10.1136/bjo-2025-327121</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Abid%20A%2C%20Kandel%20H%2C%20Watson%20S.%20Systematic%20review%20investigating%20the%20time%20taken%20for%20corneal%20stabilisation%20following%20contact%20lens%20cessation.%20British%20Journal%20of%20Ophthalmology.%202025" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">9.</div>
+              <div class="pub-content">
+                <div class="citation">Proxenos CJ, <strong>Kandel H</strong>, Gupta A, Chen JY, Watson A, Downie N, Watson SL. Corneal crosslinking for keratoconus in children with thin corneas: A multicentre registry study. AJO International. 2025;2(3):100145.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Proxenos%20CJ%2C%20Kandel%20H%2C%20Gupta%20A%2C%20Chen%20JY%2C%20Watson%20A%2C%20Downie%20N%2C%20Watson%20SL.%20Corneal%20crosslinking%20for%20keratoconus%20in%20children%20with%20thin%20corneas%3A%20A%20multicentre%20registry%20study.%20AJO%20International.%202025%3B2%283%29%3A100145." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">10.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Stapleton F, Downie LE, Chidi‐Egboka NC, Mingo-Botin D, Arnalich-Montiel F, Rauz S, Recchioni A, Sitaula S, Markoulli M, Daien V, Babeau F, Geerling G, Craig JP, Watson SL. The impact of dry eye disease on patient-reported quality of life: A Save Sight Dry Eye Registry study. The Ocular Surface. 2025;37:11-23.</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1016/j.jtos.2025.02.005" target="_blank" rel="noopener">DOI: 10.1016/j.jtos.2025.02.005</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Stapleton%20F%2C%20Downie%20LE%2C%20Chidi%E2%80%90Egboka%20NC%2C%20Mingo-Botin%20D%2C%20Arnalich-Montiel%20F%2C%20Rauz%20S%2C%20Recchioni%20A%2C%20Sitaula%20S%2C%20Markoulli%20M%2C%20Daien%20V%2C%20Babeau%20F%2C%20Geerling%20G%2C%20Craig%20JP%2C%20Watson%20SL.%20The%20impact%20of%20dry%20eye%20disease%20on%20patient-reported%20quality%20of%20life%3A%20A%20Save%20Sight%20Dry%20Eye%20Registry%20study.%20The%20Ocular%20Surface.%202025%3B37%3A11-23." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">11.</div>
+              <div class="pub-content">
+                <div class="citation">Arnalich-Montiel F, Ortiz-Toquero S, <strong>Kandel H</strong>, Lewis N, Downie N, Watson A, Abbondanza M, Watson S. Intereye Asymmetry as a Predictor of Progression in Patients with Untreated Keratoconus: Findings From a Longitudinal Study. Cornea. 2025;44(3):337-41</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1097/ICO.0000000000003601" target="_blank" rel="noopener">DOI: 10.1097/ICO.0000000000003601</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Arnalich-Montiel%20F%2C%20Ortiz-Toquero%20S%2C%20Kandel%20H%2C%20Lewis%20N%2C%20Downie%20N%2C%20Watson%20A%2C%20Abbondanza%20M%2C%20Watson%20S.%20Intereye%20Asymmetry%20as%20a%20Predictor%20of%20Progression%20in%20Patients%20with%20Untreated%20Keratoconus%3A%20Findings%20From%20a%20Longitudinal%20Study.%20Cornea.%202025%3B44%283%29%3A337-41" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">12.</div>
+              <div class="pub-content">
+                <div class="citation">Qureshi M, Watson SL, <strong>Kandel H</strong>. Pulsed corneal crosslinking in the treatment of Keratoconus: a systematic review and meta-analysis. Graefe&#x27;s Archive for Clinical and Experimental Ophthalmology. 2025;263(3):589-601</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1007/s00417-024-06622-7" target="_blank" rel="noopener">DOI: 10.1007/s00417-024-06622-7</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Qureshi%20M%2C%20Watson%20SL%2C%20Kandel%20H.%20Pulsed%20corneal%20crosslinking%20in%20the%20treatment%20of%20Keratoconus%3A%20a%20systematic%20review%20and%20meta-analysis.%20Graefe%27s%20Archive%20for%20Clinical%20and%20Experimental%20Ophthalmology.%202025%3B263%283%29%3A589-601" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">13.</div>
+              <div class="pub-content">
+                <div class="citation">Sirota SB, Doxey MC, Dominguez RM, …..........…<strong>Kandel H</strong>, …............. Global, regional, and national burden of upper respiratory infections and otitis media, 1990–2021: a systematic analysis from the Global Burden of Disease Study 2021. The Lancet Infectious Diseases. 2025 Jan 1;25(1):36-51.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Sirota%20SB%2C%20Doxey%20MC%2C%20Dominguez%20RM%2C%20%E2%80%A6..........%E2%80%A6Kandel%20H%2C%20%E2%80%A6.............%20Global%2C%20regional%2C%20and%20national%20burden%20of%20upper%20respiratory%20infections%20and%20otitis%20media%2C%201990%E2%80%932021%3A%20a%20systematic%20analysis%20from%20the%20Global%20Burden%20of%20Disease%20Study%202021.%20The%20Lancet%20Infectious%20Diseases.%202025%20Jan%201%3B25%281%29%3A36-51." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><h2 id="year-2024">2024</h2><div class="publication">
+              <div class="pub-number">14.</div>
+              <div class="pub-content">
+                <div class="citation">Borchert GA*, <strong>Kandel H*</strong>, Gupta A, Chen JY, Kerdraon Y, Mills R, Watson SL. Save sight keratoconus registry study: Transepithelial versus epithelium-off corneal crosslinking. AJO International. 2024 1(4):100073.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Borchert%20GA%2A%2C%20Kandel%20H%2A%2C%20Gupta%20A%2C%20Chen%20JY%2C%20Kerdraon%20Y%2C%20Mills%20R%2C%20Watson%20SL.%20Save%20sight%20keratoconus%20registry%20study%3A%20Transepithelial%20versus%20epithelium-off%20corneal%20crosslinking.%20AJO%20International.%202024%201%284%29%3A100073." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">15.</div>
+              <div class="pub-content">
+                <div class="citation">Watson SL, Chidi-Egboka NC, Khoo P, Cabrera-Aguas M, Stapleton F, Geerling G, Mingo D, Rauz S, Recchioni A, Arnalich-Montiel F, Downie LE, Daien V, Babeau F, Craig JP, <strong>Kandel H</strong>. Efficient Capture of Dry Eye Data from the Real-World: The Save Sight Dry Eye Registry. AJO International. 2024;1(3):100065.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Watson%20SL%2C%20Chidi-Egboka%20NC%2C%20Khoo%20P%2C%20Cabrera-Aguas%20M%2C%20Stapleton%20F%2C%20Geerling%20G%2C%20Mingo%20D%2C%20Rauz%20S%2C%20Recchioni%20A%2C%20Arnalich-Montiel%20F%2C%20Downie%20LE%2C%20Daien%20V%2C%20Babeau%20F%2C%20Craig%20JP%2C%20Kandel%20H.%20Efficient%20Capture%20of%20Dry%20Eye%20Data%20from%20the%20Real-World%3A%20The%20Save%20Sight%20Dry%20Eye%20Registry.%20AJO%20International.%202024%3B1%283%29%3A100065." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">16.</div>
+              <div class="pub-content">
+                <div class="citation">Le DT, <strong>Kandel H</strong>, Chidi-Egboka NC, Geerling G, Rauz S, Recchioni A, Lim CH, Watson SL. Ocular neuropathic pain in a real-world patient cohort with dry eye disease: A save sight dry eye registry study. AJO International. 2024 Dec 11;1(4):100068.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Le%20DT%2C%20Kandel%20H%2C%20Chidi-Egboka%20NC%2C%20Geerling%20G%2C%20Rauz%20S%2C%20Recchioni%20A%2C%20Lim%20CH%2C%20Watson%20SL.%20Ocular%20neuropathic%20pain%20in%20a%20real-world%20patient%20cohort%20with%20dry%20eye%20disease%3A%20A%20save%20sight%20dry%20eye%20registry%20study.%20AJO%20International.%202024%20Dec%2011%3B1%284%29%3A100068." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">17.</div>
+              <div class="pub-content">
+                <div class="citation">Tran L, <strong>Kandel H</strong>, Sari D, Chiu CH, Watson SL. Artificial Intelligence and Ophthalmic Clinical Registries. American Journal of Ophthalmology. 2024;268:263-74</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1016/j.ajo.2024.07.039" target="_blank" rel="noopener">DOI: 10.1016/j.ajo.2024.07.039</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Tran%20L%2C%20Kandel%20H%2C%20Sari%20D%2C%20Chiu%20CH%2C%20Watson%20SL.%20Artificial%20Intelligence%20and%20Ophthalmic%20Clinical%20Registries.%20American%20Journal%20of%20Ophthalmology.%202024%3B268%3A263-74" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">18.</div>
+              <div class="pub-content">
+                <div class="citation">Fan L, <strong>Kandel H*</strong>, Watson SL*. Impacts of keratoconus on quality of life: a qualitative study. Eye. 2024</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1038/s41433-024-03251-6" target="_blank" rel="noopener">DOI: 10.1038/s41433-024-03251-6</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Fan%20L%2C%20Kandel%20H%2A%2C%20Watson%20SL%2A.%20Impacts%20of%20keratoconus%20on%20quality%20of%20life%3A%20a%20qualitative%20study.%20Eye.%202024" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">19.</div>
+              <div class="pub-content">
+                <div class="citation">Markoulli M, Fricke TR, Arvind A, Frick KD, Hart KM, Joshi MR, <strong>Kandel H</strong>, et al. BCLA CLEAR Presbyopia: Epidemiology and impact. Contact Lens Anterior Eye. 2024:102157.</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1016/j.clae.2024.102157" target="_blank" rel="noopener">DOI: 10.1016/j.clae.2024.102157</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Markoulli%20M%2C%20Fricke%20TR%2C%20Arvind%20A%2C%20Frick%20KD%2C%20Hart%20KM%2C%20Joshi%20MR%2C%20Kandel%20H%2C%20et%20al.%20BCLA%20CLEAR%20Presbyopia%3A%20Epidemiology%20and%20impact.%20Contact%20Lens%20Anterior%20Eye.%202024%3A102157." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">20.</div>
+              <div class="pub-content">
+                <div class="citation">Cabrera Aguas M, Chidi‐Egboka N, <strong>Kandel H</strong>, Watson SL. Antimicrobial resistance in ocular infection: a review Clin Exp Ophthalmol 2024;52(3):258-275</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Cabrera%20Aguas%20M%2C%20Chidi%E2%80%90Egboka%20N%2C%20Kandel%20H%2C%20Watson%20SL.%20Antimicrobial%20resistance%20in%20ocular%20infection%3A%20a%20review%20Clin%20Exp%20Ophthalmol%202024%3B52%283%29%3A258-275" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">21.</div>
+              <div class="pub-content">
+                <div class="citation">Rogers JT, Black J, Harwood M, Wilkinson B, <strong>Kandel H</strong>, Ramke J. Vision impairment and differential access to eye health services in Aotearoa New Zealand: a scoping review. BMJ Public Health. 2024;2(1):e000313</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Rogers%20JT%2C%20Black%20J%2C%20Harwood%20M%2C%20Wilkinson%20B%2C%20Kandel%20H%2C%20Ramke%20J.%20Vision%20impairment%20and%20differential%20access%20to%20eye%20health%20services%20in%20Aotearoa%20New%20Zealand%3A%20a%20scoping%20review.%20BMJ%20Public%20Health.%202024%3B2%281%29%3Ae000313" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">22.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Abbondanza M, Gupta A, Mills R, Watson AS, Petsoglou C, Kerdraon Y, Watson SL. Comparison of standard versus accelerated corneal collagen cross-linking for keratoconus: 5-year outcomes from the Save Sight Keratoconus Registry. Eye 2024;38:95-102</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1038/s41433-023-02641-6" target="_blank" rel="noopener">DOI: 10.1038/s41433-023-02641-6</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Abbondanza%20M%2C%20Gupta%20A%2C%20Mills%20R%2C%20Watson%20AS%2C%20Petsoglou%20C%2C%20Kerdraon%20Y%2C%20Watson%20SL.%20Comparison%20of%20standard%20versus%20accelerated%20corneal%20collagen%20cross-linking%20for%20keratoconus%3A%205-year%20outcomes%20from%20the%20Save%20Sight%20Keratoconus%20Registry.%20Eye%202024%3B38%3A95-102" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">23.</div>
+              <div class="pub-content">
+                <div class="citation">Wu AM, Cross M, Elliott JM, …..<strong>Kandel H</strong>, …........... Global, regional, and national burden of neck pain, 1990–2020, and projections to 2050: a systematic analysis of the Global Burden of Disease Study 2021. The Lancet Rheumatology. 2024;6(3):e142-55.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Wu%20AM%2C%20Cross%20M%2C%20Elliott%20JM%2C%20%E2%80%A6..Kandel%20H%2C%20%E2%80%A6...........%20Global%2C%20regional%2C%20and%20national%20burden%20of%20neck%20pain%2C%201990%E2%80%932020%2C%20and%20projections%20to%202050%3A%20a%20systematic%20analysis%20of%20the%20Global%20Burden%20of%20Disease%20Study%202021.%20The%20Lancet%20Rheumatology.%202024%3B6%283%29%3Ae142-55." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">24.</div>
+              <div class="pub-content">
+                <div class="citation">Pesudovs K, Lansingh VC, Kempen JH, …............<strong>Kandel H</strong>, …............,. Global estimates on the number of people blind or visually impaired by cataract: a meta-analysis from 2000 to 2020. Eye. 2024</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1038/s41433-024-02961" target="_blank" rel="noopener">DOI: 10.1038/s41433-024-02961</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Pesudovs%20K%2C%20Lansingh%20VC%2C%20Kempen%20JH%2C%20%E2%80%A6............Kandel%20H%2C%20%E2%80%A6............%2C.%20Global%20estimates%20on%20the%20number%20of%20people%20blind%20or%20visually%20impaired%20by%20cataract%3A%20a%20meta-analysis%20from%202000%20to%202020.%20Eye.%202024" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">25.</div>
+              <div class="pub-content">
+                <div class="citation">Schumacher AE, Kyu HH, Aali A, ….........<strong>Kandel H</strong>, ….........Global age-sex-specific mortality, life expectancy, and population estimates in 204 countries and territories and 811 subnational locations, 1950–2021, and the impact of the COVID-19 pandemic: a comprehensive demographic analysis for the Global Burden of Disease Study 2021. The Lancet. 2024</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1016/S0140-6736(24)00476-8" target="_blank" rel="noopener">DOI: 10.1016/S0140-6736(24)00476-8</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Schumacher%20AE%2C%20Kyu%20HH%2C%20Aali%20A%2C%20%E2%80%A6.........Kandel%20H%2C%20%E2%80%A6.........Global%20age-sex-specific%20mortality%2C%20life%20expectancy%2C%20and%20population%20estimates%20in%20204%20countries%20and%20territories%20and%20811%20subnational%20locations%2C%201950%E2%80%932021%2C%20and%20the%20impact%20of%20the%20COVID-19%20pandemic%3A%20a%20comprehensive%20demographic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202021.%20The%20Lancet.%202024" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">26.</div>
+              <div class="pub-content">
+                <div class="citation">Steinmetz JD, Seeher KM, Schiess N, …..........…<strong>Kandel H</strong>, …........... Global, regional, and national burden of disorders affecting the nervous system, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021 The Lancet Neurology 23(4)344-81</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Steinmetz%20JD%2C%20Seeher%20KM%2C%20Schiess%20N%2C%20%E2%80%A6..........%E2%80%A6Kandel%20H%2C%20%E2%80%A6...........%20Global%2C%20regional%2C%20and%20national%20burden%20of%20disorders%20affecting%20the%20nervous%20system%2C%201990%E2%80%932021%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202021%20The%20Lancet%20Neurology%2023%284%29344-81" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">27.</div>
+              <div class="pub-content">
+                <div class="citation">Ledesma JR, Ma J, Zhang M, …..........…<strong>Kandel H</strong>, …........... Global, regional, and national age-specific progress towards the 2020 milestones of the WHO End TB Strategy: a systematic analysis for the Global Burden of Disease Study 2021. The Lancet Infectious Diseases. 2024</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1016/S1473-3099(24)00007-0" target="_blank" rel="noopener">DOI: 10.1016/S1473-3099(24)00007-0</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Ledesma%20JR%2C%20Ma%20J%2C%20Zhang%20M%2C%20%E2%80%A6..........%E2%80%A6Kandel%20H%2C%20%E2%80%A6...........%20Global%2C%20regional%2C%20and%20national%20age-specific%20progress%20towards%20the%202020%20milestones%20of%20the%20WHO%20End%20TB%20Strategy%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202021.%20The%20Lancet%20Infectious%20Diseases.%202024" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">28.</div>
+              <div class="pub-content">
+                <div class="citation">Naghavi M, Ong KL, Aali A, …..........…<strong>Kandel H</strong>, …............ Global burden of 288 causes of death and life expectancy decomposition in 204 countries and territories and 811 subnational locations, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021. The Lancet. 2024</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1016/S0140-6736(24)00367-2" target="_blank" rel="noopener">DOI: 10.1016/S0140-6736(24)00367-2</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Naghavi%20M%2C%20Ong%20KL%2C%20Aali%20A%2C%20%E2%80%A6..........%E2%80%A6Kandel%20H%2C%20%E2%80%A6............%20Global%20burden%20of%20288%20causes%20of%20death%20and%20life%20expectancy%20decomposition%20in%20204%20countries%20and%20territories%20and%20811%20subnational%20locations%2C%201990%E2%80%932021%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202021.%20The%20Lancet.%202024" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">29.</div>
+              <div class="pub-content">
+                <div class="citation">Ferrari AJ, Santomauro DF, Aali A, …..........…<strong>Kandel H</strong>, …............ Global incidence, prevalence, years lived with disability (YLDs), disability-adjusted life-years (DALYs), and healthy life expectancy (HALE) for 371 diseases and injuries in 204 countries and territories and 811 subnational locations, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021. The Lancet. 2024;10440:2133-61</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Ferrari%20AJ%2C%20Santomauro%20DF%2C%20Aali%20A%2C%20%E2%80%A6..........%E2%80%A6Kandel%20H%2C%20%E2%80%A6............%20Global%20incidence%2C%20prevalence%2C%20years%20lived%20with%20disability%20%28YLDs%29%2C%20disability-adjusted%20life-years%20%28DALYs%29%2C%20and%20healthy%20life%20expectancy%20%28HALE%29%20for%20371%20diseases%20and%20injuries%20in%20204%20countries%20and%20territories%20and%20811%20subnational%20locations%2C%201990%E2%80%932021%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202021.%20The%20Lancet.%202024%3B10440%3A2133-61" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">30.</div>
+              <div class="pub-content">
+                <div class="citation">Rupert R. A. Bourne, Jost B. Jonas, …..........…<strong>Kandel H</strong>, …............ Global estimates on the number of people blind or visually impaired by glaucoma: A meta-analysis from 2000 to 2020. Eye (2024).</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1038/s41433-024-02995" target="_blank" rel="noopener">DOI: 10.1038/s41433-024-02995</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Rupert%20R.%20A.%20Bourne%2C%20Jost%20B.%20Jonas%2C%20%E2%80%A6..........%E2%80%A6Kandel%20H%2C%20%E2%80%A6............%20Global%20estimates%20on%20the%20number%20of%20people%20blind%20or%20visually%20impaired%20by%20glaucoma%3A%20A%20meta-analysis%20from%202000%20to%202020.%C2%A0Eye%C2%A0%282024%29." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">31.</div>
+              <div class="pub-content">
+                <div class="citation">Arndt MB, Abate YH, Abbasi-Kangevari M, …..........…<strong>Kandel H</strong>, …............. Global, regional, and national progress towards the 2030 global nutrition targets and forecasts to 2050: a systematic analysis for the Global Burden of Disease Study 2021. The Lancet. 2024 Dec 21;404(10471):2543-83.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Arndt%20MB%2C%20Abate%20YH%2C%20Abbasi-Kangevari%20M%2C%20%E2%80%A6..........%E2%80%A6Kandel%20H%2C%20%E2%80%A6.............%20Global%2C%20regional%2C%20and%20national%20progress%20towards%20the%202030%20global%20nutrition%20targets%20and%20forecasts%20to%202050%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202021.%20The%20Lancet.%202024%20Dec%2021%3B404%2810471%29%3A2543-83." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><h2 id="year-2023">2023</h2><div class="publication">
+              <div class="pub-number">32.</div>
+              <div class="pub-content">
+                <div class="citation">Rogers JT, <strong>Kandel H</strong>, Harwood M, Vea T, Black J, Ramke J. Access to eye care among adults from an underserved community in Aotearoa New Zealand. Clinical and Experimental Optometry. 2023</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1080/08164622.2023.2291527" target="_blank" rel="noopener">DOI: 10.1080/08164622.2023.2291527</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Rogers%20JT%2C%20Kandel%20H%2C%20Harwood%20M%2C%20Vea%20T%2C%20Black%20J%2C%20Ramke%20J.%20Access%20to%20eye%20care%20among%20adults%20from%20an%20underserved%20community%20in%20Aotearoa%20New%20Zealand.%20Clinical%20and%20Experimental%20Optometry.%202023" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">33.</div>
+              <div class="pub-content">
+                <div class="citation">Borchert GA*, <strong>Kandel H*</strong>, Watson SL. Epithelium-on versus epithelium-off corneal collagen crosslinking for keratoconus: A systematic review and meta-analysis. Graefe Arch Clin Exp Ophthalmol.</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1007/s00417-023-06287-8" target="_blank" rel="noopener">DOI: 10.1007/s00417-023-06287-8</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Borchert%20GA%2A%2C%20Kandel%20H%2A%2C%20Watson%20SL.%20Epithelium-on%20versus%20epithelium-off%20corneal%20collagen%20crosslinking%20for%20keratoconus%3A%20A%20systematic%20review%20and%20meta-analysis.%20Graefe%20Arch%20Clin%20Exp%20Ophthalmol." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">34.</div>
+              <div class="pub-content">
+                <div class="citation">Le DTM, <strong>Kandel H</strong>, Watson SL. Evaluation of Ocular Neuropathic Pain. Ocul Surf 2023;30:213-235</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Le%20DTM%2C%20Kandel%20H%2C%20Watson%20SL.%20Evaluation%20of%20Ocular%20Neuropathic%20Pain.%20Ocul%20Surf%202023%3B30%3A213-235" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">35.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Gillies MC, Watson SL. Opportunities and challenges for clinical registries. Clinical &amp; Experimental Ophthalmology. 2023;51(6):651-2</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Gillies%20MC%2C%20Watson%20SL.%20Opportunities%20and%20challenges%20for%20clinical%20registries.%20Clinical%20%26%20Experimental%20Ophthalmology.%202023%3B51%286%29%3A651-2" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">36.</div>
+              <div class="pub-content">
+                <div class="citation">Durakovic E, <strong>Kandel H</strong>, Watson SL. The Mental Health Impact of Keratoconus – A Systematic Review. Cornea 2023 42(9):p 1187-97</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Durakovic%20E%2C%20Kandel%20H%2C%20Watson%20SL.%20The%20Mental%20Health%20Impact%20of%20Keratoconus%20%E2%80%93%20A%20Systematic%20Review.%20Cornea%202023%2042%289%29%3Ap%201187-97" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">37.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Chen JY, Sahebjada S, Chong EW, Wiffen S, Watson SL. Cross-linking improves the quality of life of people with keratoconus: A cross-sectional and longitudinal study from the Save Sight Keratoconus Registry. Cornea 2023;42:1377–83)</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Chen%20JY%2C%20Sahebjada%20S%2C%20Chong%20EW%2C%20Wiffen%20S%2C%20Watson%20SL.%20Cross-linking%20improves%20the%20quality%20of%20life%20of%20people%20with%20keratoconus%3A%20A%20cross-sectional%20and%20longitudinal%20study%20from%20the%20Save%20Sight%20Keratoconus%20Registry.%20Cornea%202023%3B42%3A1377%E2%80%9383%29" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">38.</div>
+              <div class="pub-content">
+                <div class="citation">Bist J, <strong>Kandel H</strong>, Paudel N, et al. Prevalence of refractive errors in Nepalese children and adults: a systematic review with meta-analysis. Clin Exp Optom 2023;106(2):119-32</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1080/08164622.2022.2153582" target="_blank" rel="noopener">DOI: 10.1080/08164622.2022.2153582</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Bist%20J%2C%20Kandel%20H%2C%20Paudel%20N%2C%20et%20al.%20Prevalence%20of%20refractive%20errors%20in%20Nepalese%20children%20and%20adults%3A%20a%20systematic%20review%20with%20meta-analysis.%20Clin%20Exp%20Optom%202023%3B106%282%29%3A119-32" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">39.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Pesudovs K, Nguyen V, Chen JY, Poon A, Mills RL, Watson SL. Patient-reported outcomes in keratoconus: a Save Sight Keratoconus Registry study. Cornea 2023;42(5):590-597</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Pesudovs%20K%2C%20Nguyen%20V%2C%20Chen%20JY%2C%20Poon%20A%2C%20Mills%20RL%2C%20Watson%20SL.%20Patient-reported%20outcomes%20in%20keratoconus%3A%20a%20Save%20Sight%20Keratoconus%20Registry%20study.%20Cornea%202023%3B42%285%29%3A590-597" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">40.</div>
+              <div class="pub-content">
+                <div class="citation">Benito-Pascual B*, <strong>Kandel H*</strong>, Abbondanza M, Mills R, Sullivan L, Watson SL. Efficacy and safety of standard corneal cross-linking procedures performed with short vs standard riboflavin induction: a Save Sight Keratoconus Registry study Cornea 2023;42(3),326-31</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Benito-Pascual%20B%2A%2C%20Kandel%20H%2A%2C%20Abbondanza%20M%2C%20Mills%20R%2C%20Sullivan%20L%2C%20Watson%20SL.%20Efficacy%20and%20safety%20of%20standard%20corneal%20cross-linking%20procedures%20performed%20with%20short%20vs%20standard%20riboflavin%20induction%3A%20a%20Save%20Sight%20Keratoconus%20Registry%20study%20Cornea%202023%3B42%283%29%2C326-31" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">41.</div>
+              <div class="pub-content">
+                <div class="citation">Acharya K, Mahat B, <strong>Kandel H</strong>. Ocular Injuries After Bungee Jumping J Nepal Health Res Counc 2023;21(60):538-540</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Acharya%20K%2C%20Mahat%20B%2C%20Kandel%20H.%20Ocular%20Injuries%20After%20Bungee%20Jumping%20J%20Nepal%20Health%20Res%20Counc%202023%3B21%2860%29%3A538-540" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">42.</div>
+              <div class="pub-content">
+                <div class="citation">Micah AE, Bhangdia K, Cogswell IE, …..<strong>Kandel H</strong>, ….... Global investments in pandemic preparedness and COVID-19: development assistance and domestic spending on health between 1990 and 2026. The Lancet Global Health. 2023 [A publication from the GBD 2019 Antimicrobial Resistance Collaborators] 2023;11(3):E385-E413</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Micah%20AE%2C%20Bhangdia%20K%2C%20Cogswell%20IE%2C%20%E2%80%A6..Kandel%20H%2C%20%E2%80%A6....%20Global%20investments%20in%20pandemic%20preparedness%20and%20COVID-19%3A%20development%20assistance%20and%20domestic%20spending%20on%20health%20between%201990%20and%202026.%20The%20Lancet%20Global%20Health.%202023%20%5BA%20publication%20from%20the%20GBD%202019%20Antimicrobial%20Resistance%20Collaborators%5D%202023%3B11%283%29%3AE385-E413" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">43.</div>
+              <div class="pub-content">
+                <div class="citation">Momtazmanesh S, Moghaddam SS, Ghamari SH, …..<strong>Kandel H</strong>, …..... Global burden of chronic respiratory diseases and risk factors, 1990–2019: an update from the Global Burden of Disease Study 2019. eClinicalMedicine. 2023;59:101936 [A publication from the GBD 2019 Chronic Respiratory Diseases Collaborators]</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Momtazmanesh%20S%2C%20Moghaddam%20SS%2C%20Ghamari%20SH%2C%20%E2%80%A6..Kandel%20H%2C%20%E2%80%A6.....%20Global%20burden%20of%20chronic%20respiratory%20diseases%20and%20risk%20factors%2C%201990%E2%80%932019%3A%20an%20update%20from%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20eClinicalMedicine.%202023%3B59%3A101936%20%5BA%20publication%20from%20the%20GBD%202019%20Chronic%20Respiratory%20Diseases%20Collaborators%5D" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">44.</div>
+              <div class="pub-content">
+                <div class="citation">Ferreira ML, de Luca K, Haile LM, …..<strong>Kandel H</strong>, …...... Global, regional, and national burden of low back pain, 1990–2020, its attributable risk factors, and projections to 2050: A systematic Analysis of the global burden of disease study 2021. The Lancet Rheumatology. 2023;5(6):e316-29.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Ferreira%20ML%2C%20de%20Luca%20K%2C%20Haile%20LM%2C%20%E2%80%A6..Kandel%20H%2C%20%E2%80%A6......%20Global%2C%20regional%2C%20and%20national%20burden%20of%20low%20back%20pain%2C%201990%E2%80%932020%2C%20its%20attributable%20risk%20factors%2C%20and%20projections%20to%202050%3A%20A%20systematic%20Analysis%20of%20the%20global%20burden%20of%20disease%20study%202021.%20The%20Lancet%20Rheumatology.%202023%3B5%286%29%3Ae316-29." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">45.</div>
+              <div class="pub-content">
+                <div class="citation">Thomson AM, McHugh TA, Oron AP, …..<strong>Kandel H</strong>, …....... Global, regional, and national prevalence and mortality burden of sickle cell disease, 2000–2021: a systematic analysis from the Global Burden of Disease Study 2021. The Lancet Haematology 2023;10(8):E585-E599</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Thomson%20AM%2C%20McHugh%20TA%2C%20Oron%20AP%2C%20%E2%80%A6..Kandel%20H%2C%20%E2%80%A6.......%20Global%2C%20regional%2C%20and%20national%20prevalence%20and%20mortality%20burden%20of%20sickle%20cell%20disease%2C%202000%E2%80%932021%3A%20a%20systematic%20analysis%20from%20the%20Global%20Burden%20of%20Disease%20Study%202021.%20The%20Lancet%20Haematology%202023%3B10%288%29%3AE585-E599" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">46.</div>
+              <div class="pub-content">
+                <div class="citation">Shin YH, Hwang J, Kwon R, …..<strong>Kandel H</strong>, …........ Global, regional, and national burden of allergic disorders and their risk factors in 204 countries and territories, from 1990 to 2019: A systematic analysis for the Global Burden of Disease Study 2019. Allergy. 2023;78(8):2232-54</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Shin%20YH%2C%20Hwang%20J%2C%20Kwon%20R%2C%20%E2%80%A6..Kandel%20H%2C%20%E2%80%A6........%20Global%2C%20regional%2C%20and%20national%20burden%20of%20allergic%20disorders%20and%20their%20risk%20factors%20in%20204%20countries%20and%20territories%2C%20from%201990%20to%202019%3A%20A%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20Allergy.%202023%3B78%288%29%3A2232-54" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">47.</div>
+              <div class="pub-content">
+                <div class="citation">Wunrow HY, Bender RG, Vongpradith A, …..<strong>Kandel H</strong>, …......... Global, regional, and national burden of meningitis and its aetiologies, 1990–2019: a systematic analysis for the Global Burden of Disease Study 2019. The Lancet Neurology. 2023 22(8):685-711.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Wunrow%20HY%2C%20Bender%20RG%2C%20Vongpradith%20A%2C%20%E2%80%A6..Kandel%20H%2C%20%E2%80%A6.........%20Global%2C%20regional%2C%20and%20national%20burden%20of%20meningitis%20and%20its%20aetiologies%2C%201990%E2%80%932019%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20The%20Lancet%20Neurology.%202023%2022%288%29%3A685-711." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">48.</div>
+              <div class="pub-content">
+                <div class="citation">Islam SMS, Uddin R, Maddison R, …..<strong>Kandel H</strong>, …........ The burden and trend of diseases and their risk factors in Australia, 1990–2019: a systematic analysis for the Global Burden of Disease Study 2019. The Lancet Public Health. 2023;8(8):e585-99.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Islam%20SMS%2C%20Uddin%20R%2C%20Maddison%20R%2C%20%E2%80%A6..Kandel%20H%2C%20%E2%80%A6........%20The%20burden%20and%20trend%20of%20diseases%20and%20their%20risk%20factors%20in%20Australia%2C%201990%E2%80%932019%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20The%20Lancet%20Public%20Health.%202023%3B8%288%29%3Ae585-99." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">49.</div>
+              <div class="pub-content">
+                <div class="citation">Gardner WM, Razo C, McHugh TA , …..<strong>Kandel H</strong>, ….... Prevalence, years lived with disability, and trends in anaemia burden by severity and cause, 1990–2021: findings from the Global Burden of Disease Study 2021. The Lancet Haematology. 2023;(10(9):E713-734.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Gardner%20WM%2C%20Razo%20C%2C%20McHugh%20TA%20%2C%20%E2%80%A6..Kandel%20H%2C%20%E2%80%A6....%20Prevalence%2C%20years%20lived%20with%20disability%2C%20and%20trends%20in%20anaemia%20burden%20by%20severity%20and%20cause%2C%201990%E2%80%932021%3A%20findings%20from%20the%20Global%20Burden%20of%20Disease%20Study%202021.%20The%20Lancet%20Haematology.%202023%3B%2810%289%29%3AE713-734." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">50.</div>
+              <div class="pub-content">
+                <div class="citation">Steinmetz JD, Culbreth GT, Haile LM…..<strong>Kandel H</strong>, …......... Global, regional, and national burden of osteoarthritis, 1990–2020 and projections to 2050: a systematic analysis for the Global Burden of Disease Study 2021. The Lancet Rheumatology. 2023;5(9):e508-22.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Steinmetz%20JD%2C%20Culbreth%20GT%2C%20Haile%20LM%E2%80%A6..Kandel%20H%2C%20%E2%80%A6.........%20Global%2C%20regional%2C%20and%20national%20burden%20of%20osteoarthritis%2C%201990%E2%80%932020%20and%20projections%20to%202050%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202021.%20The%20Lancet%20Rheumatology.%202023%3B5%289%29%3Ae508-22." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">51.</div>
+              <div class="pub-content">
+                <div class="citation">Wu D, Jin Y, Xing Y, …..<strong>Kandel H</strong>, ….......... Global, regional, and national incidence of six major immune-mediated inflammatory diseases: findings from the global burden of disease study 2019. eClinicalMedicine. 2023;64:102193</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Wu%20D%2C%20Jin%20Y%2C%20Xing%20Y%2C%20%E2%80%A6..Kandel%20H%2C%20%E2%80%A6..........%20Global%2C%20regional%2C%20and%20national%20incidence%20of%20six%20major%20immune-mediated%20inflammatory%20diseases%3A%20findings%20from%20the%20global%20burden%20of%20disease%20study%202019.%20eClinicalMedicine.%202023%3B64%3A102193" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">52.</div>
+              <div class="pub-content">
+                <div class="citation">Black RJ, Cross M, Haile LM, …..<strong>Kandel H</strong>, ….......... Global, regional, and national burden of rheumatoid arthritis, 1990–2020, and projections to 2050: a systematic analysis of the Global Burden of Disease Study 2021. The Lancet Rheumatology. 2023;5(10):e594-610.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Black%20RJ%2C%20Cross%20M%2C%20Haile%20LM%2C%20%E2%80%A6..Kandel%20H%2C%20%E2%80%A6..........%20Global%2C%20regional%2C%20and%20national%20burden%20of%20rheumatoid%20arthritis%2C%201990%E2%80%932020%2C%20and%20projections%20to%202050%3A%20a%20systematic%20analysis%20of%20the%20Global%20Burden%20of%20Disease%20Study%202021.%20The%20Lancet%20Rheumatology.%202023%3B5%2810%29%3Ae594-610." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">53.</div>
+              <div class="pub-content">
+                <div class="citation">Moberg ME, Hamilton EB, Zeng SM, …..<strong>Kandel H</strong>, ….......... Global, regional, and national mortality due to unintentional carbon monoxide poisoning, 2000–2021: results from the Global Burden of Disease Study 2021. The Lancet Public Health. 2023;8(11):e839-49</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Moberg%20ME%2C%20Hamilton%20EB%2C%20Zeng%20SM%2C%20%E2%80%A6..Kandel%20H%2C%20%E2%80%A6..........%20Global%2C%20regional%2C%20and%20national%20mortality%20due%20to%20unintentional%20carbon%20monoxide%20poisoning%2C%202000%E2%80%932021%3A%20results%20from%20the%20Global%20Burden%20of%20Disease%20Study%202021.%20The%20Lancet%20Public%20Health.%202023%3B8%2811%29%3Ae839-49" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">54.</div>
+              <div class="pub-content">
+                <div class="citation">Mensah G, Fuster V, Murray C. …..<strong>Kandel H</strong>, ….......... Global Burden of Cardiovascular Diseases and Risks, 1990-2022. J Am Coll Cardiol. 2023 Dec, 82 (25) 2350–2473.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Mensah%20G%2C%20Fuster%20V%2C%20Murray%20C.%20%E2%80%A6..Kandel%20H%2C%20%E2%80%A6..........%20Global%20Burden%20of%20Cardiovascular%20Diseases%20and%20Risks%2C%201990-2022.%20J%20Am%20Coll%20Cardiol.%202023%20Dec%2C%2082%20%2825%29%202350%E2%80%932473." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><h2 id="year-2022">2022</h2><div class="publication">
+              <div class="pub-number">55.</div>
+              <div class="pub-content">
+                <div class="citation">Ferdi A, <strong>Kandel H*</strong>, Nguyen V, Tan J, Arnalich-Montiel F, Abbondanza M, Watson SL. Five-year corneal cross-linking outcomes: A Save Sight Keratoconus Registry study. Clin Exp Ophthalmol. 2023;51(1):9-18.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Ferdi%20A%2C%20Kandel%20H%2A%2C%20Nguyen%20V%2C%20Tan%20J%2C%20Arnalich-Montiel%20F%2C%20Abbondanza%20M%2C%20Watson%20SL.%20Five-year%20corneal%20cross-linking%20outcomes%3A%20A%20Save%20Sight%20Keratoconus%20Registry%20study.%20Clin%20Exp%20Ophthalmol.%202023%3B51%281%29%3A9-18." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">56.</div>
+              <div class="pub-content">
+                <div class="citation">Borchert GA, Watson SL*, <strong>Kandel H*</strong>. Oxygen in Corneal Collagen Crosslinking to treat Keratoconus: A Systematic Review and Meta-analysis. Asia-Pac J Ophthalmol 2022; 11(5):453-459</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Borchert%20GA%2C%20Watson%20SL%2A%2C%20Kandel%20H%2A.%20Oxygen%20in%20Corneal%20Collagen%20Crosslinking%20to%20treat%20Keratoconus%3A%20A%20Systematic%20Review%20and%20Meta-analysis.%20Asia-Pac%20J%20Ophthalmol%202022%3B%2011%285%29%3A453-459" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">57.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Nguyen V, Piermarocchi S, Ceklic L, Teo K, Arnalich-Montiel F, Miotto S, Daien V, Gillies MC, Watson SL. Quality of life impact of eye diseases: a Save Sight Registries study. Clin Exp Ophthalmol 2022;50(4):386-97</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Nguyen%20V%2C%20Piermarocchi%20S%2C%20Ceklic%20L%2C%20Teo%20K%2C%20Arnalich-Montiel%20F%2C%20Miotto%20S%2C%20Daien%20V%2C%20Gillies%20MC%2C%20Watson%20SL.%20Quality%20of%20life%20impact%20of%20eye%20diseases%3A%20a%20Save%20Sight%20Registries%20study.%20Clin%20Exp%20Ophthalmol%202022%3B50%284%29%3A386-97" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">58.</div>
+              <div class="pub-content">
+                <div class="citation">Kandel S, Chaudhary M, Mishra SK, Joshi ND, Subedi M, Puri PR, Gyawali P, Bist J, <strong>Kandel H</strong>. Evaluation of corneal topography, pachymetry and higher-order aberrations for detecting subclinical keratoconus. Ophthalmic and Physiological Optics 2022;42(3):594-608</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20S%2C%20Chaudhary%20M%2C%20Mishra%20SK%2C%20Joshi%20ND%2C%20Subedi%20M%2C%20Puri%20PR%2C%20Gyawali%20P%2C%20Bist%20J%2C%20Kandel%20H.%20Evaluation%20of%20corneal%20topography%2C%20pachymetry%20and%20higher-order%20aberrations%20for%20detecting%20subclinical%20keratoconus.%20Ophthalmic%20and%20Physiological%20Optics%202022%3B42%283%29%3A594-608" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">59.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>. Quality-of-life outcomes of long-term contact lens wear: A systematic review. Contact Lens and Anterior Eye. 2022;45:101521.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H.%20Quality-of-life%20outcomes%20of%20long-term%20contact%20lens%20wear%3A%20A%20systematic%20review.%20Contact%20Lens%20and%20Anterior%20Eye.%202022%3B45%3A101521." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">60.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Downie LE*, Watson SL*. The Save Sight Keratoconus Registry – Optometry Module: An opportunity to use real-world data to ararrarvo eye care. Clin Exp Optom 2022;105(1):96-99</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Downie%20LE%2A%2C%20Watson%20SL%2A.%20The%20Save%20Sight%20Keratoconus%20Registry%20%E2%80%93%20Optometry%20Module%3A%20An%20opportunity%20to%20use%20real-world%20data%20to%20ararrarvo%20eye%20care.%20Clin%20Exp%20Optom%202022%3B105%281%29%3A96-99" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">61.</div>
+              <div class="pub-content">
+                <div class="citation">Gokul KC, <strong>Kandel H</strong>, Valiño L, Kaiti R, Roy P, Sohail M, Gurung DB. Computational study for Temperature Distribution in ArF Excimer Laser Corneal Refractive Surgeries Using Different Beam Delivery Techniques. Lasers in Medical Science 2022;37(3):1709-1716</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Gokul%20KC%2C%20Kandel%20H%2C%20Vali%C3%B1o%20L%2C%20Kaiti%20R%2C%20Roy%20P%2C%20Sohail%20M%2C%20Gurung%20DB.%20Computational%20study%20for%20Temperature%20Distribution%20in%20ArF%20Excimer%20Laser%20Corneal%20Refractive%20Surgeries%20Using%20Different%20Beam%20Delivery%20Techniques.%20Lasers%20in%20Medical%20Science%202022%3B37%283%29%3A1709-1716" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">62.</div>
+              <div class="pub-content">
+                <div class="citation">Ferdi AC, Nguyen V, <strong>Kandel H</strong>, Tan J, Arnalich-Montiel F, Abbondanza M, Watson SL. Predictors of progression in untreated keratoconus: A Save Sight Keratoconus Registry study. Br J Ophthalmol 2022;106(9):1206-12</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Ferdi%20AC%2C%20Nguyen%20V%2C%20Kandel%20H%2C%20Tan%20J%2C%20Arnalich-Montiel%20F%2C%20Abbondanza%20M%2C%20Watson%20SL.%20Predictors%20of%20progression%20in%20untreated%20keratoconus%3A%20A%20Save%20Sight%20Keratoconus%20Registry%20study.%20Br%20J%20Ophthalmol%202022%3B106%289%29%3A1206-12" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">63.</div>
+              <div class="pub-content">
+                <div class="citation">Ramke J, Evans JR, Habtamu E, [et. al. including <strong>Kandel H</strong>]. Grand Challenges in global eye health: a global prioritisation process using Delphi method. Lancet Healthy Longevity 2022;3(1):e31-e41</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Ramke%20J%2C%20Evans%20JR%2C%20Habtamu%20E%2C%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Grand%20Challenges%20in%20global%20eye%20health%3A%20a%20global%20prioritisation%20process%20using%20Delphi%20method.%20Lancet%20Healthy%20Longevity%202022%3B3%281%29%3Ae31-e41" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">64.</div>
+              <div class="pub-content">
+                <div class="citation">Alvarez EM, Force LM, Xu R, [et. al. including <strong>Kandel H</strong>]. The global burden of adolescent and young adult cancer in 2019: a systematic analysis for the Global Burden of Disease Study 2019. The Lancet Oncology. 2022;23(1):27-52</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Alvarez%20EM%2C%20Force%20LM%2C%20Xu%20R%2C%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20The%20global%20burden%20of%20adolescent%20and%20young%20adult%20cancer%20in%202019%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20The%20Lancet%20Oncology.%202022%3B23%281%29%3A27-52" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">65.</div>
+              <div class="pub-content">
+                <div class="citation">Kocarnik JM, Compton K, Dean FE, [et. al. including <strong>Kandel H</strong>]. Cancer incidence, mortality, years of life lost, years lived with disability, and disability-adjusted life years for 29 cancer groups from 2010 to 2019: a systematic analysis for the Global Burden of Disease Study 2019. JAMA Oncology 2021 doi:10.1001/jamaoncol.2021.6987</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1001/jamaoncol.2021.6987" target="_blank" rel="noopener">DOI: 10.1001/jamaoncol.2021.6987</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Kocarnik%20JM%2C%20Compton%20K%2C%20Dean%20FE%2C%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Cancer%20incidence%2C%20mortality%2C%20years%20of%20life%20lost%2C%20years%20lived%20with%20disability%2C%20and%20disability-adjusted%20life%20years%20for%2029%20cancer%20groups%20from%202010%20to%202019%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20JAMA%20Oncology%202021%20doi%3A10.1001/jamaoncol.2021.6987" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">66.</div>
+              <div class="pub-content">
+                <div class="citation">Nichols E, Steinmetz JD, Vollset SE, [et. al. including <strong>Kandel H</strong>]. Estimation of the global prevalence of dementia in 2019 and forecasted prevalence in 2050: an analysis for the Global Burden of Disease Study 2019. The Lancet Public Health 2022;7(2):e105</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Nichols%20E%2C%20Steinmetz%20JD%2C%20Vollset%20SE%2C%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Estimation%20of%20the%20global%20prevalence%20of%20dementia%20in%202019%20and%20forecasted%20prevalence%20in%202050%3A%20an%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20The%20Lancet%20Public%20Health%202022%3B7%282%29%3Ae105" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">67.</div>
+              <div class="pub-content">
+                <div class="citation">Cousin E, Duncan BB, Stein C, [et. al. including <strong>Kandel H</strong>]. Diabetes mortality and trends before 25 years of age: an analysis of the Global Burden of Disease Study 2019. The Lancet Diabetes &amp; Endocrinology. 2022 Feb 7.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Cousin%20E%2C%20Duncan%20BB%2C%20Stein%20C%2C%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Diabetes%20mortality%20and%20trends%20before%2025%20years%20of%20age%3A%20an%20analysis%20of%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20The%20Lancet%20Diabetes%20%26%20Endocrinology.%202022%20Feb%207." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">68.</div>
+              <div class="pub-content">
+                <div class="citation">Sheena BS, Hiebert L, Han H, [et. al. including <strong>Kandel H</strong>]. Global, regional, and national burden of hepatitis B, 1990–2019: a systematic analysis for the Global Burden of Disease Study 2019. The Lancet Gastroenterology &amp; Hepatology.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Sheena%20BS%2C%20Hiebert%20L%2C%20Han%20H%2C%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Global%2C%20regional%2C%20and%20national%20burden%20of%20hepatitis%20B%2C%201990%E2%80%932019%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20The%20Lancet%20Gastroenterology%20%26%20Hepatology." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">69.</div>
+              <div class="pub-content">
+                <div class="citation">Peden AE, Cullen P, Francis KL, [et. al. including <strong>Kandel H</strong>]. Adolescent transport and unintentional injuries: a systematic analysis using the Global Burden of Disease Study 2019</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1016/S2468-2667(22)00134-7" target="_blank" rel="noopener">DOI: 10.1016/S2468-2667(22)00134-7</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Peden%20AE%2C%20Cullen%20P%2C%20Francis%20KL%2C%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Adolescent%20transport%20and%20unintentional%20injuries%3A%20a%20systematic%20analysis%20using%20the%20Global%20Burden%20of%20Disease%20Study%202019" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">70.</div>
+              <div class="pub-content">
+                <div class="citation">Bryazka D, Reitsma MB, Griswold MG, [et. al. including <strong>Kandel H</strong>]. Population-level risks of alcohol consumption by amount, geography, age, sex, and year: a systematic analysis for the Global Burden of Disease Study 2020. Lancet; 2022;400(10347):185-235</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Bryazka%20D%2C%20Reitsma%20MB%2C%20Griswold%20MG%2C%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Population-level%20risks%20of%20alcohol%20consumption%20by%20amount%2C%20geography%2C%20age%2C%20sex%2C%20and%20year%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202020.%20Lancet%3B%202022%3B400%2810347%29%3A185-235" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">71.</div>
+              <div class="pub-content">
+                <div class="citation">Kyu HH, Vongpradith A, Sirota SB [et. al. including <strong>Kandel H</strong>] Age–sex differences in the global burden of lower respiratory infections and risk factors, 1990–2019: results from the Global Burden of Disease Study 2019. The Lancet Infectious Diseases;2022 [</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1016/S1473-3099(22)00510-2" target="_blank" rel="noopener">DOI: 10.1016/S1473-3099(22)00510-2</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Kyu%20HH%2C%20Vongpradith%20A%2C%20Sirota%20SB%20%5Bet.%20al.%20including%20Kandel%20H%5D%20Age%E2%80%93sex%20differences%20in%20the%20global%20burden%20of%20lower%20respiratory%20infections%20and%20risk%20factors%2C%201990%E2%80%932019%3A%20results%20from%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20The%20Lancet%20Infectious%20Diseases%3B2022%20%5B" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">72.</div>
+              <div class="pub-content">
+                <div class="citation">Haakenstad A, Yearwood JA, Fullman N [et. al. including <strong>Kandel H</strong>] Assessing performance of the Healthcare Access and Quality Index, overall and by select age groups, for 204 countries and territories, 1990–2019: a systematic analysis from the Global Burden of Disease Study 2019. Lancet Global Health 2022;S2214-109X(22)00429-6 [A publication from the GBD 2019 Healthcare Access and Quality Collaborators]</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1016/S2214-109X(22)00429-6" target="_blank" rel="noopener">DOI: 10.1016/S2214-109X(22)00429-6</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Haakenstad%20A%2C%20Yearwood%20JA%2C%20Fullman%20N%20%5Bet.%20al.%20including%20Kandel%20H%5D%20Assessing%20performance%20of%20the%20Healthcare%20Access%20and%20Quality%20Index%2C%20overall%20and%20by%20select%20age%20groups%2C%20for%20204%20countries%20and%20territories%2C%201990%E2%80%932019%3A%20a%20systematic%20analysis%20from%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20Lancet%20Global%20Health%202022%3BS2214-109X%2822%2900429-6%20%5BA%20publication%20from%20the%20GBD%202019%20Healthcare%20Access%20and%20Quality%20Collaborators%5D" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">73.</div>
+              <div class="pub-content">
+                <div class="citation">Ikuta KS, Swetschinski LR, Aguilar GR, …..<strong>Kandel H</strong>, …... Global mortality associated with 33 bacterial pathogens in 2019: a systematic analysis for the Global Burden of Disease Study 2019. The Lancet. 2022 [A publication from the GBD 2019 Antimicrobial Resistance Collaborators]</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1016/S0140-6736(22)02185-7" target="_blank" rel="noopener">DOI: 10.1016/S0140-6736(22)02185-7</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Ikuta%20KS%2C%20Swetschinski%20LR%2C%20Aguilar%20GR%2C%20%E2%80%A6..Kandel%20H%2C%20%E2%80%A6...%20Global%20mortality%20associated%20with%2033%20bacterial%20pathogens%20in%202019%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20The%20Lancet.%202022%20%5BA%20publication%20from%20the%20GBD%202019%20Antimicrobial%20Resistance%20Collaborators%5D" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><h2 id="year-2021">2021</h2><div class="publication">
+              <div class="pub-number">74.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Khadka J, Watson S, Fenwick E, Pesudovs K. Item banks for measurement of refractive error-specific quality-of-life. Ophthalmic Physiol Opt. 2021;41(3):591-602</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Khadka%20J%2C%20Watson%20S%2C%20Fenwick%20E%2C%20Pesudovs%20K.%20Item%20banks%20for%20measurement%20of%20refractive%20error-specific%20quality-of-life.%20Ophthalmic%20Physiol%20Opt.%202021%3B41%283%29%3A591-602" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">75.</div>
+              <div class="pub-content">
+                <div class="citation">Sankaridurg P, Tahhan N, <strong>Kandel H</strong>, Naduvilath T, Zou H, Frick KD, Marmamula S, Friedman DS, Lamoureux E, Keeffe J, Walline JJ. IMI Impact of myopia. Investigative ophthalmology &amp; visual science. 2021 Apr 28;62(5):2-.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Sankaridurg%20P%2C%20Tahhan%20N%2C%20Kandel%20H%2C%20Naduvilath%20T%2C%20Zou%20H%2C%20Frick%20KD%2C%20Marmamula%20S%2C%20Friedman%20DS%2C%20Lamoureux%20E%2C%20Keeffe%20J%2C%20Walline%20JJ.%20IMI%20Impact%20of%20myopia.%20Investigative%20ophthalmology%20%26%20visual%20science.%202021%20Apr%2028%3B62%285%29%3A2-." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">76.</div>
+              <div class="pub-content">
+                <div class="citation">Wolffsohn JS, Dumbleton K, Huntjens B, <strong>Kandel H</strong>, Koh S, Kunnen CM, Nagra M, Pult H, Sulley AL, Vianya-Estopa M, Walsh K, Stapleton F. CLEAR-Evidence-based contact lens practice. Contact Lens and Anterior Eye. 2021;44(2):368-97.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Wolffsohn%20JS%2C%20Dumbleton%20K%2C%20Huntjens%20B%2C%20Kandel%20H%2C%20Koh%20S%2C%20Kunnen%20CM%2C%20Nagra%20M%2C%20Pult%20H%2C%20Sulley%20AL%2C%20Vianya-Estopa%20M%2C%20Walsh%20K%2C%20Stapleton%20F.%20CLEAR-Evidence-based%20contact%20lens%20practice.%20Contact%20Lens%20and%20Anterior%20Eye.%202021%3B44%282%29%3A368-97." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">77.</div>
+              <div class="pub-content">
+                <div class="citation">Bist J, Kaphle D, Marasini S, <strong>Kandel H</strong>. Spectacle non-tolerance in clinical practice – A systematic review with meta-analysis. Ophthalmic &amp; Physiological Optics 2021;41(3); 610-22</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Bist%20J%2C%20Kaphle%20D%2C%20Marasini%20S%2C%20Kandel%20H.%20Spectacle%20non-tolerance%20in%20clinical%20practice%20%E2%80%93%20A%20systematic%20review%20with%20meta-analysis.%20Ophthalmic%20%26%20Physiological%20Optics%202021%3B41%283%29%3B%20610-22" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">78.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Nguyen V, Ferdi AC, Gupta A, Abbondanza M, Sullivan L, Apel A, Watson SL. Comparative efficacy and safety of standard versus accelerated corneal cross-linking for keratoconus: one-year outcomes from the Save Sight Keratoconus Registry study. Cornea 2021;40(12):1581-9</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Nguyen%20V%2C%20Ferdi%20AC%2C%20Gupta%20A%2C%20Abbondanza%20M%2C%20Sullivan%20L%2C%20Apel%20A%2C%20Watson%20SL.%20Comparative%20efficacy%20and%20safety%20of%20standard%20versus%20accelerated%20corneal%20cross-linking%20for%20keratoconus%3A%20one-year%20outcomes%20from%20the%20Save%20Sight%20Keratoconus%20Registry%20study.%20Cornea%202021%3B40%2812%29%3A1581-9" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">79.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Watson SL. Quality-of-life researchers in ocular allergy may benefit from the newer methods. The Journal of Allergy and Clinical Immunology: In Practice 2021. 1: 595-6.</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1016/j.jaip.2020.09.067" target="_blank" rel="noopener">DOI: 10.1016/j.jaip.2020.09.067</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Watson%20SL.%20Quality-of-life%20researchers%20in%20ocular%20allergy%20may%20benefit%20from%20the%20newer%20methods.%20The%20Journal%20of%20Allergy%20and%20Clinical%20Immunology%3A%20In%20Practice%202021.%201%3A%20595-6." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">80.</div>
+              <div class="pub-content">
+                <div class="citation">Nichols E et al. [GBD 2019 Collaborators. including <strong>Kandel H</strong>]. Global mortality from dementia: Application of a new method and results from the Global Burden of Disease Study 2019. Alzheimer&#x27;s &amp; Dementia: Translational Research &amp; Clinical Interventions. 2021;7(1):e12200.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Nichols%20E%20et%20al.%20%5BGBD%202019%20Collaborators.%20including%20Kandel%20H%5D.%20Global%20mortality%20from%20dementia%3A%20Application%20of%20a%20new%20method%20and%20results%20from%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20Alzheimer%27s%20%26%20Dementia%3A%20Translational%20Research%20%26%20Clinical%20Interventions.%202021%3B7%281%29%3Ae12200." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">81.</div>
+              <div class="pub-content">
+                <div class="citation">Steinmetz JD, Bourne RRA, Briant PS, Flaxman S, Taylor H, Jonas JB [et. al. including <strong>Kandel H</strong>]. Causes of blindness and vision impairment in 2020 and trends over 30 years, and prevalence of avoidable blindness in relation to VISION 2020: the Right to Sight: an analysis for the Global Burden of Disease Study. Lancet Global Health 2021;9(2):e144-e166</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Steinmetz%20JD%2C%20Bourne%20RRA%2C%20Briant%20PS%2C%20Flaxman%20S%2C%20Taylor%20H%2C%20Jonas%20JB%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Causes%20of%20blindness%20and%20vision%20impairment%20in%202020%20and%20trends%20over%2030%20years%2C%20and%20prevalence%20of%20avoidable%20blindness%20in%20relation%20to%20VISION%202020%3A%20the%20Right%20to%20Sight%3A%20an%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study.%20Lancet%20Global%20Health%202021%3B9%282%29%3Ae144-e166" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">82.</div>
+              <div class="pub-content">
+                <div class="citation">Bourne RRA, Steinmetz JD, Flaxman S, Briant PS, Taylor H, Resnikoff S [et. al. including <strong>Kandel H</strong>]. Trends in prevalence of blindness and distance and near vision impairment over 30 years: an analysis for the Global Burden of Disease Study. Lancet Global Health 2021;9(2):e130-e143</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Bourne%20RRA%2C%20Steinmetz%20JD%2C%20Flaxman%20S%2C%20Briant%20PS%2C%20Taylor%20H%2C%20Resnikoff%20S%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Trends%20in%20prevalence%20of%20blindness%20and%20distance%20and%20near%20vision%20impairment%20over%2030%20years%3A%20an%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study.%20Lancet%20Global%20Health%202021%3B9%282%29%3Ae130-e143" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">83.</div>
+              <div class="pub-content">
+                <div class="citation">Haile LM, Kamenov K, Briant PS, Orji AU, Steinmetz JD, Abdoli A, Abdollahi M, Abu-Gharbieh E, Afshin A, Ahmed H, Rashid TA. Hearing loss prevalence and years lived with disability, 1990–2019: findings from the Global Burden of Disease Study 2019. The Lancet. 2021;397(10278):996-1009.</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1016/S0140-6736(21)00516-X" target="_blank" rel="noopener">DOI: 10.1016/S0140-6736(21)00516-X</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Haile%20LM%2C%20Kamenov%20K%2C%20Briant%20PS%2C%20Orji%20AU%2C%20Steinmetz%20JD%2C%20Abdoli%20A%2C%20Abdollahi%20M%2C%20Abu-Gharbieh%20E%2C%20Afshin%20A%2C%20Ahmed%20H%2C%20Rashid%20TA.%20Hearing%20loss%20prevalence%20and%20years%20lived%20with%20disability%2C%201990%E2%80%932019%3A%20findings%20from%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20The%20Lancet.%202021%3B397%2810278%29%3A996-1009." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">84.</div>
+              <div class="pub-content">
+                <div class="citation">Reitsma MB, Kendrick PJ, Ababneh E, [et. al. including <strong>Kandel H</strong>]. Spatial, temporal, and demographic patterns in prevalence of smoking tobacco use and attributable disease burden in 204 countries and territories, 1990–2019: a systematic analysis from the Global Burden of Disease Study 2019. The Lancet. 2021;397(10292):2337-2360</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Reitsma%20MB%2C%20Kendrick%20PJ%2C%20Ababneh%20E%2C%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Spatial%2C%20temporal%2C%20and%20demographic%20patterns%20in%20prevalence%20of%20smoking%20tobacco%20use%20and%20attributable%20disease%20burden%20in%20204%20countries%20and%20territories%2C%201990%E2%80%932019%3A%20a%20systematic%20analysis%20from%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20The%20Lancet.%202021%3B397%2810292%29%3A2337-2360" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">85.</div>
+              <div class="pub-content">
+                <div class="citation">Kendrick PJ, Reitsma MB, Abbasi-Kangevari M, [et. al. including <strong>Kandel H</strong>]. Spatial, temporal, and demographic patterns in prevalence of chewing tobacco use in 204 countries and territories, 1990–2019: a systematic analysis from the Global Burden of Disease Study 2019. The Lancet Public Health. 2021 6(7):e482-e499</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kendrick%20PJ%2C%20Reitsma%20MB%2C%20Abbasi-Kangevari%20M%2C%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Spatial%2C%20temporal%2C%20and%20demographic%20patterns%20in%20prevalence%20of%20chewing%20tobacco%20use%20in%20204%20countries%20and%20territories%2C%201990%E2%80%932019%3A%20a%20systematic%20analysis%20from%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20The%20Lancet%20Public%20Health.%202021%206%287%29%3Ae482-e499" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">86.</div>
+              <div class="pub-content">
+                <div class="citation">Galles NC, Liu PY, Updike RL [et. al. including <strong>Kandel H</strong>]. Measuring routine childhood vaccination coverage in 204 countries and territories, 1980–2019: a systematic analysis for the Global Burden of Disease Study 2020, Release 1. The Lancet 2021;398(10299):503-521</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Galles%20NC%2C%20Liu%20PY%2C%20Updike%20RL%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Measuring%20routine%20childhood%20vaccination%20coverage%20in%20204%20countries%20and%20territories%2C%201980%E2%80%932019%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202020%2C%20Release%201.%20The%20Lancet%202021%3B398%2810299%29%3A503-521" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">87.</div>
+              <div class="pub-content">
+                <div class="citation">Ledesma JR, Ma J, Vongpradith A, [et. al. including <strong>Kandel H</strong>]. Global, regional, and national sex differences in the global burden of tuberculosis by HIV status, 1990–2019: results from the Global Burden of Disease Study 2019. The Lancet Infectious Diseases. 2021</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1016/S1473-3099(21)00449-7" target="_blank" rel="noopener">DOI: 10.1016/S1473-3099(21)00449-7</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Ledesma%20JR%2C%20Ma%20J%2C%20Vongpradith%20A%2C%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Global%2C%20regional%2C%20and%20national%20sex%20differences%20in%20the%20global%20burden%20of%20tuberculosis%20by%20HIV%20status%2C%201990%E2%80%932019%3A%20results%20from%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20The%20Lancet%20Infectious%20Diseases.%202021" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">88.</div>
+              <div class="pub-content">
+                <div class="citation">Feigin VL, Stark BA, Johnson CO [et. al. including <strong>Kandel H</strong>]. Global, regional, and national burden of stroke and its risk factors, 1990–2019: a systematic analysis for the Global Burden of Disease Study 2019. The Lancet Neurology. 2021;20(10):795-820</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Feigin%20VL%2C%20Stark%20BA%2C%20Johnson%20CO%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Global%2C%20regional%2C%20and%20national%20burden%20of%20stroke%20and%20its%20risk%20factors%2C%201990%E2%80%932019%3A%20a%20systematic%20analysis%20for%20the%20Global%20Burden%20of%20Disease%20Study%202019.%20The%20Lancet%20Neurology.%202021%3B20%2810%29%3A795-820" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">89.</div>
+              <div class="pub-content">
+                <div class="citation">Jahagirdar D, Walters MK, Novotney A, [et. al. including <strong>Kandel H</strong>]. Global, regional, and national sex-specific burden and control of the HIV epidemic, 1990–2019, for 204 countries and territories: the Global Burden of Diseases Study 2019. The Lancet HIV. 2021;8(10):e633-51.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Jahagirdar%20D%2C%20Walters%20MK%2C%20Novotney%20A%2C%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Global%2C%20regional%2C%20and%20national%20sex-specific%20burden%20and%20control%20of%20the%20HIV%20epidemic%2C%201990%E2%80%932019%2C%20for%20204%20countries%20and%20territories%3A%20the%20Global%20Burden%20of%20Diseases%20Study%202019.%20The%20Lancet%20HIV.%202021%3B8%2810%29%3Ae633-51." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">90.</div>
+              <div class="pub-content">
+                <div class="citation">Micah AE, Cogswell IE, Cunningham B, [et. al. including <strong>Kandel H</strong>]. Tracking development assistance for health and for COVID-19: a review of development assistance, government, out-of-pocket, and other private spending on health for 204 countries and territories, 1990–2050. The Lancet. 2021;398(10308):1317-43</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Micah%20AE%2C%20Cogswell%20IE%2C%20Cunningham%20B%2C%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Tracking%20development%20assistance%20for%20health%20and%20for%20COVID-19%3A%20a%20review%20of%20development%20assistance%2C%20government%2C%20out-of-pocket%2C%20and%20other%20private%20spending%20on%20health%20for%20204%20countries%20and%20territories%2C%201990%E2%80%932050.%20The%20Lancet.%202021%3B398%2810308%29%3A1317-43" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><h2 id="year-2020">2020</h2><div class="publication">
+              <div class="pub-number">91.</div>
+              <div class="pub-content">
+                <div class="citation">Gyawali R, Adhikary R, <strong>Kandel H</strong>. Allied eye health professionals in eye care services in Nepal. Community Eye Health 2020; 33(110): S9–S10.</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Gyawali%20R%2C%20Adhikary%20R%2C%20Kandel%20H.%20Allied%20eye%20health%20professionals%20in%20eye%20care%20services%20in%20Nepal.%20Community%20Eye%20Health%202020%3B%2033%28110%29%3A%20S9%E2%80%93S10." target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">92.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Pesudovs K, Watson SL. Measurement of quality-of-life in keratoconus. Cornea 2020; 9(3):386-93</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1097/ICO.0000000000002170" target="_blank" rel="noopener">DOI: 10.1097/ICO.0000000000002170</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Pesudovs%20K%2C%20Watson%20SL.%20Measurement%20of%20quality-of-life%20in%20keratoconus.%20Cornea%202020%3B%209%283%29%3A386-93" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">93.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Pesudovs K, Ferdi A, Mills R, Chen JY, Watson A, Poon A, Dwonie LE, Watson SL. Psychometric properties of the Keratoconus Outcomes Research Questionnaire (KORQ): a Save Sight Keratoconus Registry study. Cornea 2020;39(3):303-10</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Pesudovs%20K%2C%20Ferdi%20A%2C%20Mills%20R%2C%20Chen%20JY%2C%20Watson%20A%2C%20Poon%20A%2C%20Dwonie%20LE%2C%20Watson%20SL.%20Psychometric%20properties%20of%20the%20Keratoconus%20Outcomes%20Research%20Questionnaire%20%28KORQ%29%3A%20a%20Save%20Sight%20Keratoconus%20Registry%20study.%20Cornea%202020%3B39%283%29%3A303-10" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">94.</div>
+              <div class="pub-content">
+                <div class="citation">Kaphle D, <strong>Kandel H</strong>, Khadka J, Mashige K, Msosa J, Naidoo K. Validation and use of the Quality of life Impact of Refractive Correction Questionnaire in spectacle wearers in Malawi: A clinical practice-based study. Malawi Medical Journal 2020;32(2):54-63</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kaphle%20D%2C%20Kandel%20H%2C%20Khadka%20J%2C%20Mashige%20K%2C%20Msosa%20J%2C%20Naidoo%20K.%20Validation%20and%20use%20of%20the%20Quality%20of%20life%20Impact%20of%20Refractive%20Correction%20Questionnaire%20in%20spectacle%20wearers%20in%20Malawi%3A%20A%20clinical%20practice-based%20study.%20Malawi%20Medical%20Journal%202020%3B32%282%29%3A54-63" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">95.</div>
+              <div class="pub-content">
+                <div class="citation">Roth GA, Mensah GA, Johnson CO, Addolorato G, Ammirati E, Baddour LM [et. al. including <strong>Kandel H</strong>]. Global Burden of Cardiovascular Diseases and Risk Factors, 1990–2019: Update from the GBD 2019 Study Journal of the American College of Cardiology 2020 (State Of The Art Review) 2020;76(25):2982–3021</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Roth%20GA%2C%20Mensah%20GA%2C%20Johnson%20CO%2C%20Addolorato%20G%2C%20Ammirati%20E%2C%20Baddour%20LM%20%5Bet.%20al.%20including%20Kandel%20H%5D.%20Global%20Burden%20of%20Cardiovascular%20Diseases%20and%20Risk%20Factors%2C%201990%E2%80%932019%3A%20Update%20from%20the%20GBD%202019%20Study%20Journal%20of%20the%20American%20College%20of%20Cardiology%202020%20%28State%20Of%20The%20Art%20Review%29%202020%3B76%2825%29%3A2982%E2%80%933021" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><h2 id="year-2019">2019</h2><div class="publication">
+              <div class="pub-number">96.</div>
+              <div class="pub-content">
+                <div class="citation">Kaphle D, <strong>Kandel H</strong>, Paudel P, Naidoo K. Profile of Nepalese optometrists and their perspectives about a new optometry school. African Vision and Eye Health 2019;78(1):a476</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kaphle%20D%2C%20Kandel%20H%2C%20Paudel%20P%2C%20Naidoo%20K.%20Profile%20of%20Nepalese%20optometrists%20and%20their%20perspectives%20about%20a%20new%20optometry%20school.%20African%20Vision%20and%20Eye%20Health%202019%3B78%281%29%3Aa476" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">97.</div>
+              <div class="pub-content">
+                <div class="citation">Kaphle D, <strong>Kandel H</strong>, Paudel P. Optometry in Nepalese Context: The Profession Beyond Providing Refraction Services. Journal of the Nepal Medical Association 2019;57(215):59-63</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kaphle%20D%2C%20Kandel%20H%2C%20Paudel%20P.%20Optometry%20in%20Nepalese%20Context%3A%20The%20Profession%20Beyond%20Providing%20Refraction%20Services.%20Journal%20of%20the%20Nepal%20Medical%20Association%202019%3B57%28215%29%3A59-63" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><h2 id="year-2018">2018</h2><div class="publication">
+              <div class="pub-number">98.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Khadka J, Fenwick E, Sharma S, Sharma B, Kafle K, Kharal A, Kaiti R, Dhungana P, Shrestha MK, Nepal B, Thapa S, Goggin M, Lamoureux E, Pesudovs K. Constructing item banks for measuring quality-of-life in refractive error. Optometry and Vision Science 2018;95(7):575-87</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Khadka%20J%2C%20Fenwick%20E%2C%20Sharma%20S%2C%20Sharma%20B%2C%20Kafle%20K%2C%20Kharal%20A%2C%20Kaiti%20R%2C%20Dhungana%20P%2C%20Shrestha%20MK%2C%20Nepal%20B%2C%20Thapa%20S%2C%20Goggin%20M%2C%20Lamoureux%20E%2C%20Pesudovs%20K.%20Constructing%20item%20banks%20for%20measuring%20quality-of-life%20in%20refractive%20error.%20Optometry%20and%20Vision%20Science%202018%3B95%287%29%3A575-87" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">99.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Khadka J, Shrestha MK, Sharma S, Neupane Kandel S, Dhungana P, Pradhan K, Nepal B, Thapa S, Pesudovs K. Uncorrected and corrected refractive error experiences of Nepalese adults: A qualitative study. Ophthalmic Epidemiology, 2018;25(2):147-61</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1080/09286586.2017.1376338" target="_blank" rel="noopener">DOI: 10.1080/09286586.2017.1376338</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Khadka%20J%2C%20Shrestha%20MK%2C%20Sharma%20S%2C%20Neupane%20Kandel%20S%2C%20Dhungana%20P%2C%20Pradhan%20K%2C%20Nepal%20B%2C%20Thapa%20S%2C%20Pesudovs%20K.%20Uncorrected%20and%20corrected%20refractive%20error%20experiences%20of%20Nepalese%20adults%3A%20A%20qualitative%20study.%20Ophthalmic%20Epidemiology%2C%202018%3B25%282%29%3A147-61" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><h2 id="year-2017">2017</h2><div class="publication">
+              <div class="pub-number">100.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Khadka J, Lundstrom M, Goggin M, Pesudovs K. Questionnaires for measuring refractive surgery outcomes. Journal of Refractive Surgery 2017;33(6):416-424</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Khadka%20J%2C%20Lundstrom%20M%2C%20Goggin%20M%2C%20Pesudovs%20K.%20Questionnaires%20for%20measuring%20refractive%20surgery%20outcomes.%20Journal%20of%20Refractive%20Surgery%202017%3B33%286%29%3A416-424" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">101.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Khadka J, Goggin M, Pesudovs K. Patient-reported outcomes for assessment of quality-of-life in refractive error: A Systematic Review. Optometry and Vision Science 2017;94(12):1102-19</div>
+                <div class="pub-links"><a class="doi-link" href="https://doi.org/10.1097/OPX.0000000000001143" target="_blank" rel="noopener">DOI: 10.1097/OPX.0000000000001143</a> <a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Khadka%20J%2C%20Goggin%20M%2C%20Pesudovs%20K.%20Patient-reported%20outcomes%20for%20assessment%20of%20quality-of-life%20in%20refractive%20error%3A%20A%20Systematic%20Review.%20Optometry%20and%20Vision%20Science%202017%3B94%2812%29%3A1102-19" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">102.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Khadka J, Goggin M, Pesudovs K. Impact of refractive error on quality-of-life: a qualitative study. Clinical and Experimental Ophthalmology, 2017;45(7):677-88 [</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Khadka%20J%2C%20Goggin%20M%2C%20Pesudovs%20K.%20Impact%20of%20refractive%20error%20on%20quality-of-life%3A%20a%20qualitative%20study.%20Clinical%20and%20Experimental%20Ophthalmology%2C%202017%3B45%287%29%3A677-88%20%5B" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">103.</div>
+              <div class="pub-content">
+                <div class="citation">Chaudhary M, <strong>Kandel H</strong>, Adhikari P. Visual outcome in Keratoconus with spherical rigid gas permeable contact lens. Journal of Institute of Medicine 2017;39(3):8-11</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Chaudhary%20M%2C%20Kandel%20H%2C%20Adhikari%20P.%20Visual%20outcome%20in%20Keratoconus%20with%20spherical%20rigid%20gas%20permeable%20contact%20lens.%20Journal%20of%20Institute%20of%20Medicine%202017%3B39%283%29%3A8-11" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">104.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Khadka J, Pesudovs, K. Intensive blood-pressure treatment and patient-reported outcomes. New England Journal of Medicine 2017;377:2096-2097</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Khadka%20J%2C%20Pesudovs%2C%20K.%20Intensive%20blood-pressure%20treatment%20and%20patient-reported%20outcomes.%20New%20England%20Journal%20of%20Medicine%202017%3B377%3A2096-2097" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">105.</div>
+              <div class="pub-content">
+                <div class="citation">Pokharel A, <strong>Kandel H</strong>, Shrestha P. Pervasive blindness and ocular morbidity in the Chepang people of Nepal. Nepalese Journal of Ophthalmology;2017,8(2):189-91</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Pokharel%20A%2C%20Kandel%20H%2C%20Shrestha%20P.%20Pervasive%20blindness%20and%20ocular%20morbidity%20in%20the%20Chepang%20people%20of%20Nepal.%20Nepalese%20Journal%20of%20Ophthalmology%3B2017%2C8%282%29%3A189-91" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><h2 id="year-2016">2016</h2><div class="publication">
+              <div class="pub-number">106.</div>
+              <div class="pub-content">
+                <div class="citation">Khanal S, Pokharel A, <strong>Kandel H</strong>. Visual deficits in Nepalese patients with oculocutaneous albinism. Journal of Optometry. 2016;9:102-9</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Khanal%20S%2C%20Pokharel%20A%2C%20Kandel%20H.%20Visual%20deficits%20in%20Nepalese%20patients%20with%20oculocutaneous%20albinism.%20Journal%20of%20Optometry.%202016%3B9%3A102-9" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">107.</div>
+              <div class="pub-content">
+                <div class="citation">Kaphle D, Gyawali R, <strong>Kandel H</strong>, Reading A, Msosa JM. Vision impairment and ocular morbidity in a refugee population in Malawi. Optometry and Vision Science 2016;93(2):188-193</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kaphle%20D%2C%20Gyawali%20R%2C%20Kandel%20H%2C%20Reading%20A%2C%20Msosa%20JM.%20Vision%20impairment%20and%20ocular%20morbidity%20in%20a%20refugee%20population%20in%20Malawi.%20Optometry%20and%20Vision%20Science%202016%3B93%282%29%3A188-193" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">108.</div>
+              <div class="pub-content">
+                <div class="citation">Pokharel A, <strong>Kandel H</strong>, Shrestha R. Harrowing blindness and ocular morbidity in a Himalayan village. Nepal Journal of Epidemiology 2016;6(2):582-3</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Pokharel%20A%2C%20Kandel%20H%2C%20Shrestha%20R.%20Harrowing%20blindness%20and%20ocular%20morbidity%20in%20a%20Himalayan%20village.%20Nepal%20Journal%20of%20Epidemiology%202016%3B6%282%29%3A582-3" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><h2 id="year-2015">2015</h2><div class="publication">
+              <div class="pub-number">109.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Murthy GVS, Bascaran C. Human resources for refraction services in central Nepal. Clinical and Experimental Optometry 2015;98(4):335-41</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Murthy%20GVS%2C%20Bascaran%20C.%20Human%20resources%20for%20refraction%20services%20in%20central%20Nepal.%20Clinical%20and%20Experimental%20Optometry%C2%A02015%3B98%284%29%3A335-41" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><h2 id="year-2014">2014</h2><div class="publication">
+              <div class="pub-number">110.</div>
+              <div class="pub-content">
+                <div class="citation">Ntodie M, Danquah L, <strong>Kandel H</strong>, Abokyi S. Towards elimination of blindness due to uncorrected refractive errors: assessment of refractive error services in the Northern and Central regions of Ghana. Clinical and Experimental Optometry 2014;97(6):511-5</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Ntodie%20M%2C%20Danquah%20L%2C%20Kandel%20H%2C%20Abokyi%20S.%20Towards%20elimination%20of%20blindness%20due%20to%20uncorrected%20refractive%20errors%3A%20assessment%20of%20refractive%20error%20services%20in%20the%20Northern%20and%20Central%20regions%20of%20Ghana.%20Clinical%20and%20Experimental%20Optometry%C2%A02014%3B97%286%29%3A511-5" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">111.</div>
+              <div class="pub-content">
+                <div class="citation">Khanal S, <strong>Kandel H</strong>. Axial length and corneal curvature in anisometropic amblyopia in Nepalese children. Optometry &amp; Visual Performance 2014;2(3):258-64</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Khanal%20S%2C%20Kandel%20H.%20Axial%20length%20and%20corneal%20curvature%20in%20anisometropic%20amblyopia%20in%20Nepalese%20children.%20Optometry%20%26%20Visual%20Performance%202014%3B2%283%29%3A258-64" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">112.</div>
+              <div class="pub-content">
+                <div class="citation">Gyawali R, Nestha Mohamed F, Bist J, <strong>Kandel H</strong>, Marasini S, Khadka J. Compliance and hygiene behaviour among soft contact lens wearers in the Maldives. Clinical and Experimental Optometry 2014;97(1)43-47</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Gyawali%20R%2C%C2%A0Nestha%20Mohamed%20F%2C%C2%A0Bist%20J%2C%C2%A0Kandel%20H%2C%C2%A0Marasini%20S%2C%C2%A0Khadka%20J.%20Compliance%20and%20hygiene%20behaviour%20among%20soft%20contact%20lens%20wearers%20in%20the%20Maldives.%20Clinical%20and%20Experimental%20Optometry%C2%A02014%3B97%281%2943-47" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><h2 id="year-2012">2012</h2><div class="publication">
+              <div class="pub-number">113.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Adhikari P, Shrestha GS, Ruokonen EL, Shah DN. Visual function in patients on ethambutol therapy for tuberculosis. Journal of Ocular Pharmacology and Therapeutics 2012;28(2):174-178</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Adhikari%20P%2C%20Shrestha%20GS%2C%20Ruokonen%20EL%2C%20Shah%20DN.%20Visual%20function%20in%20patients%20on%20ethambutol%20therapy%20for%20tuberculosis.%20Journal%20of%20Ocular%20Pharmacology%20and%20Therapeutics%202012%3B28%282%29%3A174-178" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><div class="publication">
+              <div class="pub-number">114.</div>
+              <div class="pub-content">
+                <div class="citation"><strong>Kandel H</strong>, Bhatta S, Pokharel A and Khanal S. Pattern of ocular morbidity in a rural community of Nepal. The Sight 2012;8:18-19</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Kandel%20H%2C%20Bhatta%20S%2C%20Pokharel%20A%20and%20Khanal%20S.%20Pattern%20of%20ocular%20morbidity%20in%20a%20rural%20community%20of%20Nepal.%20The%20Sight%202012%3B8%3A18-19" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div><h2 id="year-2011">2011</h2><div class="publication">
+              <div class="pub-number">115.</div>
+              <div class="pub-content">
+                <div class="citation">Thakur A, Joshi P, <strong>Kandel H</strong> and Bhatta S. Profile of low vision clinics in the eastern region of Nepal: A retrospective study. British Journal of Visual Impairment 2011;29(3):215-26</div>
+                <div class="pub-links"><a class="scholar-link" href="https://scholar.google.com/scholar?q=Thakur%20A%2C%20Joshi%20P%2C%20Kandel%20H%20and%20Bhatta%20S.%20Profile%20of%20low%20vision%20clinics%20in%20the%20eastern%20region%20of%20Nepal%3A%20A%20retrospective%20study.%20British%20Journal%20of%20Visual%20Impairment%202011%3B29%283%29%3A215-26" target="_blank" rel="noopener">Google Scholar</a></div>
+              </div>
+            </div>
   </div>
+</main>
 
-  <h2>2025</h2>
+<footer>© 2026 Dr Himal Kandel</footer>
 
-  <div class="publication">
-    Sari D, <strong>Kandel H</strong>, Kha R, Watson SL.
-    <span class="publication-title">
-      What is the quality-of-life status of patients with keratoconus who
-      have not had a surgical intervention? A systematic review.
-    </span>
-    <span class="journal"> Eye.</span> 2025.
-    <br>
-    <a class="doi-link"
-       href="https://doi.org/10.1038/s41433-025-04053-0"
-       target="_blank">
-       DOI: 10.1038/s41433-025-04053-0
-    </a>
-  </div>
-
-  <div class="publication">
-    Kandel H, Stapleton F, Downie LE, Chidi-Egboka NC, Mingo-Botin D,
-    Arnalich-Montiel F, Rauz S, Recchioni A, Sitaula S, Markoulli M,
-    Daien V, Babeau F, Geerling G, Craig JP, Watson SL.
-    <span class="publication-title">
-      The impact of dry eye disease on patient-reported quality of life:
-      A Save Sight Dry Eye Registry study.
-    </span>
-    <span class="journal"> The Ocular Surface.</span>
-    2025;37:11-23.
-    <br>
-    <a class="doi-link"
-       href="https://doi.org/10.1016/j.jtos.2025.02.005"
-       target="_blank">
-       DOI: 10.1016/j.jtos.2025.02.005
-    </a>
-  </div>
-
-</div>
-
-<footer>
-  © 2026 Dr Himal Kandel
-</footer>
-
+<script>
+  const search = document.getElementById('pubSearch');
+  search.addEventListener('input', function() {
+    const q = this.value.toLowerCase().trim();
+    document.querySelectorAll('.publication').forEach(function(item) {
+      item.style.display = item.innerText.toLowerCase().includes(q) ? 'flex' : 'none';
+    });
+  });
+</script>
 </body>
 </html>
