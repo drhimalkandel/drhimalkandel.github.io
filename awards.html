@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Awards, recognition and selected research funding of Dr Himal Kandel.">
+
+  <title>Awards & Recognition | Dr Himal Kandel</title>
+
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8fb;
+      color: #222;
+      line-height: 1.65;
+    }
+
+
+    /* HEADER */
+
+    header {
+      background: #17365d;
+      color: white;
+      padding: 24px 20px;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    nav {
+      margin-top: 12px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 22px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    nav a.active {
+      background-color: rgba(255,255,255,0.15);
+      border-bottom: 3px solid white;
+      padding: 7px 10px;
+      border-radius: 4px 4px 0 0;
+    }
+
+
+    /* HERO */
+
+    .hero {
+      background: white;
+      border-bottom: 1px solid #e3e7ec;
+      padding: 48px 20px;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero h2 {
+      margin: 0 0 14px;
+      color: #17365d;
+      font-size: 37px;
+    }
+
+    .hero p {
+      max-width: 900px;
+      margin: 0;
+      font-size: 18px;
+      color: #4d5662;
+    }
+
+
+    /* MAIN */
+
+    .container {
+      max-width: 1100px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background: white;
+      padding: 32px;
+      margin-bottom: 28px;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #17365d;
+      border-bottom: 2px solid #dfe5ec;
+      padding-bottom: 8px;
+    }
+
+
+    /* FEATURED AWARDS */
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 22px;
+    }
+
+    .award-card {
+      border: 1px solid #dfe5ec;
+      background: #fafbfd;
+      border-radius: 9px;
+      padding: 24px;
+      position: relative;
+    }
+
+    .award-year {
+      display: inline-block;
+      background: #17365d;
+      color: white;
+      border-radius: 4px;
+      padding: 4px 9px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    .award-card h3 {
+      color: #17365d;
+      margin: 0 0 8px;
+      font-size: 21px;
+      line-height: 1.35;
+    }
+
+    .award-card p {
+      margin-bottom: 0;
+    }
+
+
+    /* MAJOR RECOGNITION */
+
+    .recognition {
+      background: #eef4fb;
+      border-left: 5px solid #17365d;
+      border-radius: 6px;
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+
+    .recognition:last-child {
+      margin-bottom: 0;
+    }
+
+    .recognition h3 {
+      color: #17365d;
+      margin: 0 0 8px;
+      font-size: 21px;
+    }
+
+    .recognition-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: #075fa6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .recognition-link:hover {
+      text-decoration: underline;
+    }
+
+
+    /* OTHER AWARDS */
+
+    .award-list {
+      margin-top: 10px;
+    }
+
+    .award-item {
+      padding: 17px 0;
+      border-bottom: 1px solid #e5e9ed;
+    }
+
+    .award-item:last-child {
+      border-bottom: none;
+    }
+
+    .award-item strong {
+      color: #17365d;
+    }
+
+
+    /* GRANTS */
+
+    .grant-box {
+      background: #f8fafc;
+      border: 1px solid #dfe5ec;
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 18px;
+    }
+
+    .grant-box h3 {
+      color: #17365d;
+      margin-top: 0;
+    }
+
+    .grant-examples {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .grant-card {
+      background: white;
+      border: 1px solid #e1e6ec;
+      border-radius: 7px;
+      padding: 18px;
+    }
+
+    .grant-card h4 {
+      color: #17365d;
+      margin: 0 0 7px;
+      font-size: 17px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      color: #68717c;
+      padding: 25px 20px 35px;
+      font-size: 14px;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .featured-grid,
+      .grant-examples {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 31px;
+      }
+
+      nav a {
+        margin-right: 12px;
+        line-height: 2.5;
+      }
+
+      .section {
+        padding: 24px 20px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+  <div class="header-inner">
+
+    <h1>Dr Himal Kandel</h1>
+
+    <nav>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="research.html">
+        Research
+      </a>
+
+      <a href="publications.html">
+        Publications
+      </a>
+
+      <a href="supervision.html">
+        Supervision
+      </a>
+
+      <a class="active"
+         href="awards.html">
+        Awards
+      </a>
+
+      <a href="media.html">
+        Media
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <h2>Awards & Recognition</h2>
+
+    <p>
+      Selected awards and recognition reflecting contributions
+      to research, academic achievement, research translation
+      and the broader vision science community.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<main class="container">
+
+
+<!-- FEATURED AWARDS -->
+
+<section class="section">
+
+  <h2>Major Awards</h2>
+
+  <div class="featured-grid">
+
+
+    <!-- USYD AWARD -->
+
+    <div class="award-card">
+
+      <span class="award-year">
+        2025
+      </span>
+
+      <h3>
+        Faculty of Medicine and Health
+        EMCR Outstanding Publication Award
+      </h3>
+
+      <p>
+        Awarded by The University of Sydney Faculty of Medicine
+        and Health in the <strong>Mid-Career category</strong>
+        for research examining the impact of dry eye disease
+        on patient-reported quality of life.
+      </p>
+
+    </div>
+
+
+
+    <!-- FLINDERS ALUMNI -->
+
+    <div class="award-card">
+
+      <span class="award-year">
+        2021
+      </span>
+
+      <h3>
+        Flinders University
+        Early Career Alumni Award
+      </h3>
+
+      <p>
+        Recognition from Flinders University for achievements
+        and contributions following completion of doctoral
+        research at the University.
+      </p>
+
+    </div>
+
+
+
+    <!-- STUDY ADELAIDE -->
+
+    <div class="award-card">
+
+      <span class="award-year">
+        2018
+      </span>
+
+      <h3>
+        StudyAdelaide
+        International Student of the Year
+      </h3>
+
+      <p>
+        Named <strong>International Student of the Year</strong>
+        in South Australia through the StudyAdelaide
+        International Student Awards.
+      </p>
+
+      <p>
+        The award was presented by the Governor of South Australia.
+      </p>
+
+    </div>
+
+
+
+    <!-- ACADEMIC EXCELLENCE -->
+
+    <div class="award-card">
+
+      <span class="award-year">
+        2018
+      </span>
+
+      <h3>
+        Academic Excellence –
+        Postgraduate Research
+      </h3>
+
+      <p>
+        Winner of the Academic Excellence –
+        Postgraduate Research category at the
+        StudyAdelaide International Student Awards.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- GLOBAL RECOGNITION -->
+
+<section class="section">
+
+  <h2>Global Research Recognition</h2>
+
+
+  <div class="recognition">
+
+    <h3>
+      Global Top 200 Optometry Researcher
+    </h3>
+
+    <p>
+      Recognised among the world's leading optometry researchers
+      in the global OptomRankings research rankings.
+    </p>
+
+    <a class="recognition-link"
+       href="https://optomrankings.com/"
+       target="_blank"
+       rel="noopener">
+
+      View OptomRankings →
+
+    </a>
+
+  </div>
+
+
+
+  <div class="recognition">
+
+    <h3>
+      Elsevier–Stanford Global Top 2% Scientist
+    </h3>
+
+    <p>
+      Included in the global research impact rankings commonly
+      referred to as the <strong>Elsevier–Stanford Top 2% Scientists</strong>
+      list, recognising citation impact and research influence
+      across scientific disciplines.
+    </p>
+
+  </div>
+
+
+</section>
+
+
+
+<!-- OTHER SELECTED AWARDS -->
+
+<section class="section">
+
+  <h2>Other Selected Recognition</h2>
+
+  <div class="award-list">
+
+
+    <div class="award-item">
+
+      <strong>Vice-Chancellor's Prize for Doctoral Thesis Excellence</strong>
+      — Flinders University.
+
+    </div>
+
+
+    <div class="award-item">
+
+      <strong>Vice-Chancellor's Award for Best Higher Degree
+      by Research Student Publication</strong>
+      — Flinders University.
+
+    </div>
+
+
+    <div class="award-item">
+
+      <strong>HDR Student Publication Award</strong>
+      — College of Nursing and Health Sciences,
+      Flinders University.
+
+    </div>
+
+
+    <div class="award-item">
+
+      <strong>RHD Student Publication Award</strong>
+      — Faculty of Medicine, Nursing and Health Sciences,
+      Flinders University.
+
+    </div>
+
+
+    <div class="award-item">
+
+      <strong>Academic Achievement Award</strong>
+      — Non-Residential Nepalese Association, Australia.
+
+    </div>
+
+
+    <div class="award-item">
+
+      <strong>Finalist, Faculty of Medicine and Health
+      EMCR Outstanding Publication Award</strong>
+      — The University of Sydney.
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- RESEARCH FUNDING -->
+
+<section class="section">
+
+  <h2>Research Funding</h2>
+
+  <div class="grant-box">
+
+    <h3>
+      Collaborative Research Funding
+    </h3>
+
+    <p>
+      I have contributed as a <strong>CIA or CI</strong>
+      on a number of competitive research grants supporting
+      collaborative research in corneal disease, stem-cell therapies,
+      patient-reported outcomes, clinical registries and vision science.
+    </p>
+
+    <p>
+      Selected examples include University of Sydney
+      Faculty of Medicine and Health initiatives and
+      Medical Research Future Fund (MRFF)-supported research.
+    </p>
+
+
+    <div class="grant-examples">
+
+
+      <div class="grant-card">
+
+        <h4>
+          FMH Bright Ideas Grant
+        </h4>
+
+        <p>
+          CIA on a Faculty of Medicine and Health,
+          The University of Sydney Bright Ideas Grant
+          supporting development of a comprehensive
+          quality-of-life measure for keratoconus.
+        </p>
+
+      </div>
+
+
+
+      <div class="grant-card">
+
+        <h4>
+          Corneal Stem-Cell Therapy Research
+        </h4>
+
+        <p>
+          CI on collaborative research supported through
+          Medical Research Future Fund initiatives advancing
+          corneal stem-cell repair, regeneration and
+          bioengineered technologies.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- CLOSING -->
+
+<section class="section">
+
+  <h2>Research Recognition & Impact</h2>
+
+  <p>
+    These awards and recognitions reflect a research program
+    spanning patient-centred outcomes, corneal disease,
+    quality of life, clinical registries and collaborative
+    vision science.
+  </p>
+
+  <p>
+    Further information about this work is available through
+    the <a href="research.html">Research</a>,
+    <a href="publications.html">Publications</a>
+    and <a href="media.html">Media & Engagement</a> pages.
+  </p>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+  © 2026 Dr Himal Kandel
+
+</footer>
+
+
+</body>
+
+</html>
