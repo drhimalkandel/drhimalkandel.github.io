@@ -2,15 +2,6 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3HFPN4P1Z1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3HFPN4P1Z1');
-</script>
 
   <meta charset="UTF-8">
 
@@ -21,6 +12,22 @@
         content="Academic profile of Dr Himal Kandel, vision and outcomes researcher at the Save Sight Institute, The University of Sydney.">
 
   <title>Dr Himal Kandel | Academic Profile</title>
+
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3HFPN4P1Z1"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-3HFPN4P1Z1');
+  </script>
 
 
   <style>
@@ -67,7 +74,7 @@
     nav a {
       color: white;
       text-decoration: none;
-      margin-right: 22px;
+      margin-right: 18px;
       font-weight: bold;
     }
 
@@ -76,7 +83,7 @@
     }
 
     nav a.active {
-      background-color: rgba(255, 255, 255, 0.15);
+      background-color: rgba(255,255,255,0.15);
       border-bottom: 3px solid white;
       padding: 7px 10px;
       border-radius: 4px 4px 0 0;
@@ -98,6 +105,7 @@
       display: grid;
       grid-template-columns: 300px 1fr;
       gap: 48px;
+
       align-items: center;
     }
 
@@ -108,9 +116,12 @@
     .profile-photo {
       width: 100%;
       max-width: 290px;
+
       aspect-ratio: 4 / 5;
+
       object-fit: cover;
       object-position: center top;
+
       border-radius: 12px;
 
       box-shadow:
@@ -152,13 +163,25 @@
 
     .button {
       display: inline-block;
+
       padding: 11px 18px;
+
       margin: 0 9px 10px 0;
+
       border-radius: 5px;
+
       background: #17365d;
       color: white;
+
       text-decoration: none;
+
       font-weight: bold;
+
+      border: none;
+
+      cursor: pointer;
+
+      font-size: 15px;
     }
 
     .button.secondary {
@@ -182,16 +205,24 @@
 
     .section {
       background: white;
+
       padding: 32px;
+
       margin-bottom: 28px;
+
       border-radius: 10px;
-      box-shadow: 0 2px 12px rgba(0,0,0,.07);
+
+      box-shadow:
+        0 2px 12px rgba(0,0,0,.07);
     }
 
     .section h2 {
       margin-top: 0;
+
       color: #17365d;
+
       border-bottom: 2px solid #dfe5ec;
+
       padding-bottom: 8px;
     }
 
@@ -200,98 +231,55 @@
 
     .research-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 18px;
+
       margin-top: 20px;
     }
 
     .research-card {
       background: #f8fafc;
+
       border: 1px solid #dfe5ec;
+
       border-radius: 8px;
+
       padding: 21px;
     }
 
     .research-card h3 {
       margin-top: 0;
       margin-bottom: 8px;
+
       color: #17365d;
+
       font-size: 20px;
     }
 
 
-    /* HIGHLIGHTS */
-
-    .highlight-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 20px;
-    }
-
-    .highlight-card {
-      background: #eef4fb;
-      border-radius: 8px;
-      padding: 23px 18px;
-      text-align: center;
-    }
-
-    .highlight-card strong {
-      display: block;
-      color: #17365d;
-      font-size: 22px;
-      margin-bottom: 7px;
-    }
-
-
-    /* FEATURED RESEARCH */
-
-    .featured-research {
-      background: #eef4fb;
-      border-left: 5px solid #17365d;
-      border-radius: 6px;
-      padding: 23px;
-      margin-top: 18px;
-    }
-
-    .featured-research h3 {
-      color: #17365d;
-      margin-top: 0;
-    }
-
-
-    /* PROFILE LINKS */
-
-    .profile-links {
-      margin-top: 15px;
-    }
-
-    .profile-links a {
-      display: inline-block;
-      color: #075fa6;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 7px 20px 7px 0;
-    }
-
-    .profile-links a:hover {
-      text-decoration: underline;
-    }
-
-
-    /* WEBSITE CARDS */
+    /* EXPLORE */
 
     .explore-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 16px;
+
       margin-top: 20px;
     }
 
     .explore-card {
       border: 1px solid #dfe5ec;
+
       background: #fafbfd;
+
       border-radius: 8px;
+
       padding: 20px;
     }
 
@@ -302,7 +290,9 @@
 
     .explore-card a {
       color: #075fa6;
+
       font-weight: bold;
+
       text-decoration: none;
     }
 
@@ -311,12 +301,143 @@
     }
 
 
+    /* CONNECT */
+
+    .connect-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 32px;
+
+      margin-top: 22px;
+    }
+
+    .connect-box {
+      background: #f8fafc;
+
+      border: 1px solid #dfe5ec;
+
+      border-radius: 9px;
+
+      padding: 25px;
+    }
+
+    .connect-box h3 {
+      color: #17365d;
+
+      margin-top: 0;
+
+      font-size: 21px;
+    }
+
+
+    /* PROFILE LINKS */
+
+    .profile-links {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 12px;
+
+      margin-top: 20px;
+    }
+
+    .profile-link {
+      display: block;
+
+      background: white;
+
+      border: 1px solid #d5dce5;
+
+      border-radius: 6px;
+
+      padding: 12px 14px;
+
+      color: #17365d;
+
+      font-weight: bold;
+
+      text-decoration: none;
+    }
+
+    .profile-link:hover {
+      background: #eef4fb;
+    }
+
+
+    /* FORM */
+
+    .contact-form label {
+      display: block;
+
+      font-weight: bold;
+
+      color: #394552;
+
+      margin-bottom: 5px;
+      margin-top: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+
+      width: 100%;
+
+      padding: 11px 12px;
+
+      border:
+        1px solid #c8d0d9;
+
+      border-radius: 6px;
+
+      font-family:
+        Arial, Helvetica, sans-serif;
+
+      font-size: 15px;
+
+      background: white;
+    }
+
+    .contact-form textarea {
+      min-height: 145px;
+
+      resize: vertical;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+
+      outline: none;
+
+      border-color: #17365d;
+
+      box-shadow:
+        0 0 0 2px rgba(23,54,93,.08);
+    }
+
+    .form-note {
+      color: #68717c;
+
+      font-size: 13px;
+
+      margin-top: 12px;
+    }
+
+
     /* FOOTER */
 
     footer {
       text-align: center;
+
       color: #68717c;
-      padding: 25px 20px 35px;
+
+      padding:
+        25px 20px 35px;
+
       font-size: 14px;
     }
 
@@ -326,12 +447,15 @@
     @media (max-width: 900px) {
 
       .hero-inner {
-        grid-template-columns: 240px 1fr;
+        grid-template-columns:
+          240px 1fr;
+
         gap: 30px;
       }
 
       .explore-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2, 1fr);
       }
 
     }
@@ -340,11 +464,14 @@
     @media (max-width: 700px) {
 
       .hero {
-        padding: 38px 20px;
+        padding:
+          38px 20px;
       }
 
       .hero-inner {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+          1fr;
+
         gap: 28px;
       }
 
@@ -365,9 +492,12 @@
       }
 
       .research-grid,
-      .highlight-grid,
-      .explore-grid {
-        grid-template-columns: 1fr;
+      .explore-grid,
+      .connect-grid,
+      .profile-links {
+
+        grid-template-columns:
+          1fr;
       }
 
       nav a {
@@ -376,7 +506,8 @@
       }
 
       .section {
-        padding: 24px 20px;
+        padding:
+          24px 20px;
       }
 
     }
@@ -413,8 +544,16 @@
         Publications
       </a>
 
+      <a href="leadership.html">
+        Leadership
+      </a>
+
       <a href="supervision.html">
         Supervision
+      </a>
+
+      <a href="awards.html">
+        Awards
       </a>
 
       <a href="media.html">
@@ -449,15 +588,19 @@
 
     <div class="hero-content">
 
-      <h2>Dr Himal Kandel</h2>
+      <h2>
+        Dr Himal Kandel
+      </h2>
 
       <div class="role">
         Kornhauser Research Associate
       </div>
 
       <div class="institution">
-        Save Sight Institute · Sydney Medical School ·
-        Faculty of Medicine and Health · The University of Sydney
+        Save Sight Institute ·
+        Sydney Medical School ·
+        Faculty of Medicine and Health ·
+        The University of Sydney
       </div>
 
       <p>
@@ -477,17 +620,23 @@
 
         <a class="button"
            href="publications.html">
+
           View Publications
+
         </a>
 
         <a class="button secondary"
            href="research.html">
+
           Explore Research
+
         </a>
 
         <a class="button secondary"
-           href="media.html">
-          Media & Engagement
+           href="#connect">
+
+          Connect
+
         </a>
 
       </div>
@@ -511,21 +660,25 @@
   <h2>About</h2>
 
   <p>
-    I am based at the Save Sight Institute, The University of Sydney,
-    where my work spans clinical outcomes research, patient-reported
-    outcomes, corneal disease and real-world evidence.
+    I am based at the Save Sight Institute,
+    The University of Sydney, where my work spans
+    clinical outcomes research, patient-reported outcomes,
+    corneal disease and real-world evidence.
   </p>
 
   <p>
-    My research uses clinical registry data, statistical modelling,
-    psychometric methods and qualitative and mixed-methods approaches
-    to evaluate outcomes that matter to both patients and clinicians.
+    My research uses clinical registry data,
+    statistical modelling, psychometric methods
+    and qualitative and mixed-methods approaches
+    to evaluate outcomes that matter to both
+    patients and clinicians.
   </p>
 
   <p>
-    I collaborate with clinicians and researchers in Australia
-    and internationally, and contribute to research supervision,
-    mentoring, scientific communication and community engagement.
+    I collaborate with clinicians and researchers
+    in Australia and internationally, and contribute
+    to research leadership, supervision, mentoring,
+    scientific communication and community engagement.
   </p>
 
 </section>
@@ -543,14 +696,12 @@
 
     <div class="research-card">
 
-      <h3>
-        Outcomes Research
-      </h3>
+      <h3>Outcomes Research</h3>
 
       <p>
-        Evaluation of clinical and patient-reported outcomes
-        using longitudinal data, statistical modelling and
-        real-world evidence.
+        Evaluation of clinical and patient-reported
+        outcomes using longitudinal data,
+        statistical modelling and real-world evidence.
       </p>
 
     </div>
@@ -559,14 +710,12 @@
 
     <div class="research-card">
 
-      <h3>
-        Quality of Life
-      </h3>
+      <h3>Quality of Life</h3>
 
       <p>
-        Development and application of patient-reported outcome
-        measures, including modern psychometric methods such as
-        Rasch analysis and item-response theory.
+        Development and application of patient-reported
+        outcome measures, including modern psychometric
+        methods such as Rasch analysis and item-response theory.
       </p>
 
     </div>
@@ -575,14 +724,14 @@
 
     <div class="research-card">
 
-      <h3>
-        Cornea & Keratoconus
-      </h3>
+      <h3>Cornea & Keratoconus</h3>
 
       <p>
-        Research into keratoconus, corneal cross-linking,
-        disease progression, treatment outcomes and the
-        patient impact of corneal disease.
+        Research into keratoconus,
+        corneal cross-linking,
+        disease progression,
+        treatment outcomes and the patient impact
+        of corneal disease.
       </p>
 
     </div>
@@ -591,106 +740,17 @@
 
     <div class="research-card">
 
-      <h3>
-        Clinical Registries
-      </h3>
+      <h3>Clinical Registries</h3>
 
       <p>
-        Use of real-world clinical registry data to study
-        effectiveness, safety, treatment variation and
-        patient outcomes in routine clinical practice.
+        Use of real-world clinical registry data
+        to study effectiveness, safety,
+        treatment variation and patient outcomes
+        in routine clinical practice.
       </p>
 
     </div>
 
-
-  </div>
-
-</section>
-
-
-
-<!-- SELECTED HIGHLIGHTS -->
-
-<section class="section">
-
-  <h2>Selected Highlights</h2>
-
-  <div class="highlight-grid">
-
-
-    <div class="highlight-card">
-
-      <strong>
-        115+
-      </strong>
-
-      Peer-reviewed publication records
-
-    </div>
-
-
-
-    <div class="highlight-card">
-
-      <strong>
-        International Research
-      </strong>
-
-      Collaborative work across vision science,
-      ophthalmology and global health
-
-    </div>
-
-
-
-    <div class="highlight-card">
-
-      <strong>
-        Research Translation
-      </strong>
-
-      Publications, media, professional education,
-      podcasts and community engagement
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- FEATURED RESEARCH -->
-
-<section class="section">
-
-  <h2>Research Recognition</h2>
-
-  <div class="featured-research">
-
-    <h3>
-      Award-Winning Research on Dry Eye Disease
-    </h3>
-
-    <p>
-      My research examining the impact of dry eye disease on
-      patient-reported quality of life received the
-      University of Sydney Faculty of Medicine and Health
-      EMCR Outstanding Publication Award in the Mid-Career category.
-    </p>
-
-    <p>
-      The research has also attracted professional media coverage
-      and was featured in the Faculty's
-      <strong>Research Bytes</strong> podcast.
-    </p>
-
-    <a class="button"
-       href="media.html">
-      View Media & Engagement
-    </a>
 
   </div>
 
@@ -709,13 +769,11 @@
 
     <div class="explore-card">
 
-      <h3>
-        Research
-      </h3>
+      <h3>Research</h3>
 
       <p>
-        Learn more about my research themes,
-        methods and collaborations.
+        Research themes, methods
+        and collaborations.
       </p>
 
       <a href="research.html">
@@ -728,13 +786,11 @@
 
     <div class="explore-card">
 
-      <h3>
-        Publications
-      </h3>
+      <h3>Publications</h3>
 
       <p>
-        Browse my peer-reviewed publications
-        by year and research topic.
+        Peer-reviewed research publications
+        and DOI links.
       </p>
 
       <a href="publications.html">
@@ -747,13 +803,28 @@
 
     <div class="explore-card">
 
-      <h3>
-        Supervision
-      </h3>
+      <h3>Leadership</h3>
 
       <p>
-        Read about my research supervision
-        and mentoring approach.
+        Academic leadership,
+        research governance and service.
+      </p>
+
+      <a href="leadership.html">
+        View leadership →
+      </a>
+
+    </div>
+
+
+
+    <div class="explore-card">
+
+      <h3>Supervision</h3>
+
+      <p>
+        Research supervision
+        and mentoring.
       </p>
 
       <a href="supervision.html">
@@ -766,12 +837,27 @@
 
     <div class="explore-card">
 
-      <h3>
-        Media
-      </h3>
+      <h3>Awards</h3>
 
       <p>
-        Explore media coverage, podcasts
+        Awards, recognition
+        and research achievements.
+      </p>
+
+      <a href="awards.html">
+        View awards →
+      </a>
+
+    </div>
+
+
+
+    <div class="explore-card">
+
+      <h3>Media</h3>
+
+      <p>
+        Media coverage, podcasts
         and research engagement.
       </p>
 
@@ -788,45 +874,203 @@
 
 
 
-<!-- ACADEMIC PROFILES -->
+<!-- CONNECT -->
 
-<section class="section">
+<section class="section"
+         id="connect">
 
-  <h2>Academic Profiles</h2>
+  <h2>Connect</h2>
 
   <p>
-    Publication records, researcher identifiers and citation
-    information are also available through my academic profiles.
+    For research collaborations, academic enquiries,
+    research supervision or professional engagement,
+    please get in touch or connect through one of my
+    academic and professional profiles.
   </p>
 
-  <div class="profile-links">
+
+  <div class="connect-grid">
 
 
-    <a href="https://orcid.org/0000-0002-6745-6411"
-       target="_blank"
-       rel="noopener">
+    <!-- PROFILES -->
 
-      ORCID
+    <div class="connect-box">
 
-    </a>
+      <h3>
+        Academic & Professional Profiles
+      </h3>
 
-
-    <a href="https://www.scopus.com/authid/detail.uri?authorId=57226834655"
-       target="_blank"
-       rel="noopener">
-
-      Scopus
-
-    </a>
+      <div class="profile-links">
 
 
-    <a href="https://scholar.google.com/scholar?q=Himal+Kandel"
-       target="_blank"
-       rel="noopener">
+        <a class="profile-link"
+           href="http://sydney.edu.au/medicine/people/academics/profiles/himal.kandel.php"
+           target="_blank"
+           rel="noopener">
 
-      Google Scholar
+          University of Sydney
 
-    </a>
+        </a>
+
+
+        <a class="profile-link"
+           href="https://orcid.org/0000-0002-6745-6411"
+           target="_blank"
+           rel="noopener">
+
+          ORCID
+
+        </a>
+
+
+        <a class="profile-link"
+           href="http://www.researcherid.com/rid/Q-1031-2018"
+           target="_blank"
+           rel="noopener">
+
+          Web of Science
+
+        </a>
+
+
+        <a class="profile-link"
+           href="https://www.scopus.com/authid/detail.uri?authorId=57226834655"
+           target="_blank"
+           rel="noopener">
+
+          Scopus
+
+        </a>
+
+
+        <a class="profile-link"
+           href="https://sciprofiles.com/profile/4831775"
+           target="_blank"
+           rel="noopener">
+
+          SciProfiles
+
+        </a>
+
+
+        <a class="profile-link"
+           href="https://www.linkedin.com/in/himalkandel/"
+           target="_blank"
+           rel="noopener">
+
+          LinkedIn
+
+        </a>
+
+
+        <a class="profile-link"
+           href="https://x.com/kandelhimal"
+           target="_blank"
+           rel="noopener">
+
+          X
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+
+
+    <!-- CONTACT FORM -->
+
+    <div class="connect-box">
+
+      <h3>
+        Send a Message
+      </h3>
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mdenyyya"
+        method="POST">
+
+
+        <label for="name">
+          Name
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required>
+
+
+        <label for="email">
+          Email
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required>
+
+
+        <label for="subject">
+          Subject
+        </label>
+
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          required>
+
+
+        <label for="message">
+          Message
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          required>
+        </textarea>
+
+
+        <!-- Helps Formspree set reply-to correctly -->
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="Message from Dr Himal Kandel academic website">
+
+
+        <!-- Simple anti-spam honeypot -->
+
+        <input
+          type="text"
+          name="_gotcha"
+          style="display:none">
+
+
+        <button
+          class="button"
+          type="submit">
+
+          Send Message
+
+        </button>
+
+
+        <p class="form-note">
+          Messages submitted through this form
+          are delivered securely through Formspree.
+        </p>
+
+
+      </form>
+
+    </div>
 
 
   </div>
